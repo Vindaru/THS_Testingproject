@@ -286,8 +286,7 @@ public WebElement getquotes_Select_States() {
 }  
    public void doverify_THS_Statesapplicability () throws InterruptedException, UnsupportedEncodingException {
 
-       // verify if all the states are displaying in State section
-       
+       // verify if all the states are displaying in State section     
        getquotes_Select_States().click();
        Thread.sleep(300);
        List<WebElement> stateDropdown_List = driver.findElements(ths_applicable_States_list);
@@ -295,7 +294,6 @@ public WebElement getquotes_Select_States() {
 	   WebElement element = stateDropdown_List.get(i);
 	   String stateDropdown_value = element.getAttribute("innerHTML");
 	   log.info(stateDropdown_value);  
-
        }    
 }     
       public BasicInformationPage doSelectStateByDataprovided (String stateSelect) throws InterruptedException {
@@ -309,6 +307,6 @@ public WebElement getquotes_Select_States() {
    }   
     public HomePage(WebDriver driver) {
 	super(driver);
-	// TODO Auto-generated constructor stub
+	
     }
 }
