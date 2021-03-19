@@ -17,18 +17,20 @@ import junit.framework.Assert;
  * @author vdaru
  *
  */
-public class PortalPageTest extends BaseTest{
+public class PortalPageTest extends BaseTest {
 
-    private static  Logger log = Logger.getLogger(PortalPageTest.class.getName()+" ----------------------------------");
-    
-         /*
-          * when landed on Portal Page please select on Personal lines Portal and continue to next page 
- 	 * 
- 	 */
-         @Test(priority = 1)
-        public void performPortalTest() throws InterruptedException {
-	
-	page.getInstance(LoginPage.class).doLogin(GroupID,UseName, Password);
+    private static Logger log = Logger
+	    .getLogger(PortalPageTest.class.getName() + " ----------------------------------");
+
+    /*
+     * when landed on Portal Page please select on Personal lines Portal and
+     * continue to next page
+     * 
+     */
+    @Test(priority = 1)
+    public void performPortalTest() throws InterruptedException {
+
+	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
 	Thread.sleep(300);
 	HomePage portalpage = page.getInstance(PortalPage.class).PLP_CLICK();
 	Thread.sleep(300);
@@ -36,7 +38,5 @@ public class PortalPageTest extends BaseTest{
 	log.info(HomePageHeader);
 	Assert.assertEquals(HomePageHeader, "RATING & POLICY MANAGEMENT");
     }
-    
 
-    
 }
