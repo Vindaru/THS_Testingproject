@@ -22,14 +22,13 @@ import excel_Utlis.RPM_Constant;
  * @author vdaru
  *
  */
-public class BaseTest extends ExcelUtils{
-    
-    private static  Logger log = Logger.getLogger(LoginTest.class.getName()+" ----------------------------------");
+public class BaseTest extends ExcelUtils {
 
+    private static Logger log = Logger.getLogger(LoginTest.class.getName() + " ----------------------------------");
 
     WebDriver driver;
     public Page page;
-  
+
     String GroupID;
     String UseName;
     String Password;
@@ -38,74 +37,77 @@ public class BaseTest extends ExcelUtils{
     String FirstName;
     String LastName;
     String RiskAddress;
-    String RiskCity; 
-    int  RiskZipcode; 
+    String RiskCity;
+    int RiskZipcode;
     String DOB;
-    String Occupancy; 
+    String Occupancy;
     String FireHyderate;
-    
-    @BeforeMethod 
-    public void setUp() throws Exception   {
-	
-	    String log4jConfPath = "C:\\Users\\vdaru\\eclipse-workspace\\THS_Project\\src\\test\\java\\com\\THStest\\log4j.properties";
-	    PropertyConfigurator.configure(log4jConfPath);
-	    
-	System.setProperty("webdriver.chrome.driver","C:\\Users\\vdaru\\Desktop\\Desktopp\\ECLIPSE\\requried jars\\chromedriver.exe");
-        driver = new ChromeDriver();	
-        driver.manage().window().maximize();      
-        log.info("Browser = Chrome opened successfully");
-        driver.get(RPM_Constant.URL_UAT);
+
+    @BeforeMethod
+    public void setUp() throws Exception {
+
+	String log4jConfPath = "C:\\Users\\vdaru\\eclipse-workspace\\THS_Project\\src\\test\\java\\com\\THStest\\log4j.properties";
+	PropertyConfigurator.configure(log4jConfPath);
+
+	System.setProperty("webdriver.chrome.driver",
+		"C:\\Users\\vdaru\\Desktop\\Desktopp\\ECLIPSE\\requried jars\\chromedriver.exe");
+	driver = new ChromeDriver();
+	driver.manage().window().maximize();
+	log.info("Browser = Chrome opened successfully");
+	driver.get(RPM_Constant.URL_UAT);
 	try {
 	    Thread.sleep(1000);
 	} catch (InterruptedException e) {
 	    // TODO Auto-generated catch block
 	    e.printStackTrace();
 	}
-	
-//	// excel
-	 ExcelUtils.setExcelFile(RPM_Constant.Path_TestData + RPM_Constant.File_TestData, "sheet1");		
-		int i, j;
-		for (j = 0; j < ExcelUtils.ExcelWSheet.getPhysicalNumberOfRows(); j++) {    			
-		    for (int a = 1; a <  ExcelUtils.ExcelWSheet.getPhysicalNumberOfRows(); a++) {
-	
-	 GroupID =                                                         ExcelUtils.getCellData(a, 0);
-	 UseName =                                                         ExcelUtils.getCellData(a, 1);
-	 Password =                                                        ExcelUtils.getCellData(a, 2);
-	 AgencyOveride =                                                   ExcelUtils.getCellData(a, 3);
-	 stateSelect =                                                     ExcelUtils.getCellData(a, 4); 
-	 FirstName =                                                       ExcelUtils.getCellData(a, 5); 
-	 LastName =                                                        ExcelUtils.getCellData(a, 6); 
-	 RiskAddress =                                                     ExcelUtils.getCellData(a, 7); 
-	 RiskCity=                                                         ExcelUtils.getCellData(a, 8);  
-	 RiskZipcode =                                                     (int) ExcelUtils.getNumericCellValue(a, 9);
-	 DOB =                                                             ExcelUtils.getCellData(a, 10); 
-	 Occupancy =                                                       ExcelUtils.getCellData(a, 11); 
-	 FireHyderate =                                                    ExcelUtils.getCellData(a, 12); 
 
-          page = new BasePage(driver);
-        }
-		}
+//	// excel
+	ExcelUtils.setExcelFile(RPM_Constant.Path_TestData + RPM_Constant.File_TestData, "sheet1");
+	int i, j;
+	for (j = 0; j < ExcelUtils.ExcelWSheet.getPhysicalNumberOfRows(); j++) {
+	    for (int a = 1; a < ExcelUtils.ExcelWSheet.getPhysicalNumberOfRows(); a++) {
+
+		GroupID = ExcelUtils.getCellData(a, 0);
+		UseName = ExcelUtils.getCellData(a, 1);
+		Password = ExcelUtils.getCellData(a, 2);
+		AgencyOveride = ExcelUtils.getCellData(a, 3);
+		stateSelect = ExcelUtils.getCellData(a, 4);
+		FirstName = ExcelUtils.getCellData(a, 5);
+		LastName = ExcelUtils.getCellData(a, 6);
+		RiskAddress = ExcelUtils.getCellData(a, 7);
+		RiskCity = ExcelUtils.getCellData(a, 8);
+		RiskZipcode = (int) ExcelUtils.getNumericCellValue(a, 9);
+		DOB = ExcelUtils.getCellData(a, 10);
+		Occupancy = ExcelUtils.getCellData(a, 11);
+		FireHyderate = ExcelUtils.getCellData(a, 12);
+
+		page = new BasePage(driver);
+	    }
+	}
     }
-    
+
     @BeforeTest
     public void beforeTest() throws Exception {
-			
-		System.out.println("=========================================================================***     READY FOR AUTOMATION TESTING  ***==============================================================================================================");			
+
+	System.out.println(
+		"=========================================================================***     READY FOR AUTOMATION TESTING  ***==============================================================================================================");
 
     }
-    
-    
+
     @AfterTest
     public void afterTest() {
-        System.out.println("=========================================================================***     END OF AUTOMATION TESTING  ***==============================================================================================================");			
+	System.out.println(
+		"=========================================================================***     END OF AUTOMATION TESTING  ***==============================================================================================================");
 
     }
+
     @AfterMethod
     public void tear_Down() {
-	
+
 //        System.out.println("=========================================================================***     END OF AUTOMATION TESTING  ***==============================================================================================================");			
 
 	driver.quit();
-	 log.info("Browser = Chrome opened successfully");
+	log.info("Browser = Chrome opened successfully");
     }
 }

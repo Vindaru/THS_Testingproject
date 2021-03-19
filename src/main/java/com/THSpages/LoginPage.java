@@ -14,49 +14,47 @@ import junit.framework.Assert;
  * @author vdaru
  *
  */
-public class LoginPage extends BasePage{
+public class LoginPage extends BasePage {
 
-    private static  Logger log = Logger.getLogger(LoginPage.class.getName()+" ----------------------------------");
-    //page locator
+    private static Logger log = Logger.getLogger(LoginPage.class.getName() + " ----------------------------------");
+    // page locator
     private By groupID = By.id("inputGroupID");
     private By userName = By.id("inputUserName");
     private By password = By.id("inputPassword");
     private By submitButton = By.xpath("//*[@id='authSubmit']");
     private By header = By.xpath("//*[@id='loginTitle']");
     private By invalid_credentials = By.xpath("//*[@id='errorMessage']");
-    
 
 //    private String GroupID = "";
-    
-    
+
     public LoginPage(WebDriver driver) {
-	super(driver);	
+	super(driver);
     }
 
-
-   /*        Getters (process of encapsulation)
-    * 
-    */
+    /*
+     * Getters (process of encapsulation)
+     * 
+     */
 
     /**
      * @return the groupID
      */
     public WebElement getGroupID() {
-        return getElement(groupID);
+	return getElement(groupID);
     }
 
     /**
      * @return the userName
      */
     public WebElement getUserName() {
-        return getElement(userName);
+	return getElement(userName);
     }
 
     /**
      * @return the password
      */
     public WebElement getPassword() {
-	 return getElement(password);
+	return getElement(password);
     }
 
     /**
@@ -77,24 +75,23 @@ public class LoginPage extends BasePage{
      * @return the invalid_credentials
      */
     public WebElement getinvalid_credentials() {
-        return getElement(invalid_credentials);
+	return getElement(invalid_credentials);
     }
 
     public String getLogininPagetitle() {
 	return getPageTitle();
     }
-    
-    public String getLogininPageheader() {
-   	return getPageHeader(header);
-       }
 
-    
+    public String getLogininPageheader() {
+	return getPageHeader(header);
+    }
+
     public PortalPage doLogin(String groupID, String userName, String password) throws InterruptedException {
-	
-	log.info("GroupID:"            + groupID);
-	log.info("UseName:"            + userName);
-	log.info("Password:"           + password);
-	
+
+	log.info("GroupID:" + groupID);
+	log.info("UseName:" + userName);
+	log.info("Password:" + password);
+
 	getGroupID().sendKeys(groupID);
 	Thread.sleep(300);
 	getUserName().sendKeys(userName);
@@ -103,35 +100,33 @@ public class LoginPage extends BasePage{
 	Thread.sleep(300);
 	getSubmitButton().click();
 	Thread.sleep(300);
-	// get instance 
+	// get instance
 	return getInstance(PortalPage.class);
-	
+
     }
-    
-    public PortalPage doLogin_InvalidCred(String groupID, String userName, String password) throws InterruptedException {
-	
-  	log.info("GroupID:"            + groupID);
-  	log.info("UseName:"            + userName);
-  	log.info("Password:"           + password);
-  	
-  	getGroupID().sendKeys(groupID);
-  	Thread.sleep(300);
-  	getUserName().sendKeys(userName);
-  	Thread.sleep(300);
-  	getPassword().sendKeys(password);
-  	Thread.sleep(300);
-  	getSubmitButton().click();
-  	Thread.sleep(500);
-  	String Test_InvalidCreditionals = getinvalid_credentials().getAttribute("value");
-  	log.info(Test_InvalidCreditionals);
-  	
+
+    public PortalPage doLogin_InvalidCred(String groupID, String userName, String password)
+	    throws InterruptedException {
+
+	log.info("GroupID:" + groupID);
+	log.info("UseName:" + userName);
+	log.info("Password:" + password);
+
+	getGroupID().sendKeys(groupID);
+	Thread.sleep(300);
+	getUserName().sendKeys(userName);
+	Thread.sleep(300);
+	getPassword().sendKeys(password);
+	Thread.sleep(300);
+	getSubmitButton().click();
+	Thread.sleep(500);
+	String Test_InvalidCreditionals = getinvalid_credentials().getAttribute("value");
+	log.info(Test_InvalidCreditionals);
+
 //  	Assert.assertEquals(Test_InvalidCreditionals, "get instance Authentication Failed. Please check your credentials and try again. &nbsp;&nbsp;"); 
 
-  	return getInstance(PortalPage.class);
-  	
-      }
-   
-       
-    
-}
+	return getInstance(PortalPage.class);
 
+    }
+
+}

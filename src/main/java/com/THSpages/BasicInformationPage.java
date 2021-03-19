@@ -325,7 +325,4 @@ public BasicInformationPage(WebDriver driver) {
 /**
  * @return the validateButton_Click
  */
-
-
-
 }

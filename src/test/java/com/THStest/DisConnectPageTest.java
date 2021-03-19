@@ -18,18 +18,20 @@ import junit.framework.Assert;
  * @author vdaru
  *
  */
-public class DisConnectPageTest extends BaseTest{
+public class DisConnectPageTest extends BaseTest {
 
-    private static  Logger log = Logger.getLogger(DisConnectPageTest.class.getName()+" ----------------------------------");
-    
-         /*
-          * when landed on Portal Page please select on Personal lines Portal and continue to next page 
- 	 * 
- 	 */
-    @Test(priority =1)
-        public void performDisconnectsessionTest() throws InterruptedException {
+    private static Logger log = Logger
+	    .getLogger(DisConnectPageTest.class.getName() + " ----------------------------------");
 
-	page.getInstance(LoginPage.class).doLogin(GroupID,UseName, Password);
+    /*
+     * when landed on Portal Page please select on Personal lines Portal and
+     * continue to next page
+     * 
+     */
+    @Test(priority = 1)
+    public void performDisconnectsessionTest() throws InterruptedException {
+
+	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
 	Thread.sleep(300);
 	page.getInstance(PortalPage.class).PLP_CLICK();
 	Thread.sleep(300);
@@ -39,7 +41,5 @@ public class DisConnectPageTest extends BaseTest{
 	log.info(HomePageHeader);
 	Assert.assertEquals(HomePageHeader, "RATING & POLICY MANAGEMENT");
     }
-    
 
-    
 }

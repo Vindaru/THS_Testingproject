@@ -15,38 +15,33 @@ import junit.framework.Assert;
  * @author vdaru
  *
  */
-public class LoginTest extends BaseTest{
+public class LoginTest extends BaseTest {
 
-    private static  Logger log = Logger.getLogger(LoginTest.class.getName()+" ----------------------------------");
-    
-   
- 
-    @Test (priority =1)
+    private static Logger log = Logger.getLogger(LoginTest.class.getName() + " ----------------------------------");
+
+    @Test(priority = 1)
     public void verifyUserNamedisplaying() {
-	
+
 	// Verify if the agent login name is displaying in the Portal Page
 	String LoginInPageTitle = page.getInstance(LoginPage.class).getPageTitile();
 	log.info(LoginInPageTitle);
 	Assert.assertEquals(LoginInPageTitle, "Tower Hill Insurance Group - Login");
     }
-    
-    
 
-    @Test(priority =2)
+    @Test(priority = 2)
     public void verifyLoginPageheaderTest() {
-	String LoginInPageheader = page.getInstance(LoginPage.class).getLogininPageheader();	
+	String LoginInPageheader = page.getInstance(LoginPage.class).getLogininPageheader();
 	log.info(LoginInPageheader);
-	
-    }
-    
 
-    @Test(priority =3)
+    }
+
+    @Test(priority = 3)
     public void performLoginTest_validvalues() throws InterruptedException {
 	/*
-	 * perform login test with valid cred  GroupID
+	 * perform login test with valid cred GroupID
 	 */
 	PortalPage portalpage = page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
-	log.info("Testing if agent is able to login in with valid creditionals ");	
+	log.info("Testing if agent is able to login in with valid creditionals ");
 	try {
 	    Thread.sleep(2000);
 	} catch (InterruptedException e) {
@@ -58,17 +53,13 @@ public class LoginTest extends BaseTest{
 	// WELCOME TO TOWER HILL'S AGENT PORTAL
 	Assert.assertEquals(portalPageHeader, "WELCOME TO TOWER HILL'S AGENT PORTAL");
     }
-    
-    
-    
-    
-    
-    @Test(priority =4)
+
+    @Test(priority = 4)
     public void performLoginTest_invalidvalues() throws InterruptedException {
 	/*
 	 * perform login test with in-valid password
 	 */
-	page.getInstance(LoginPage.class).doLogin_InvalidCred(GroupID,UseName, "invalid password");
+	page.getInstance(LoginPage.class).doLogin_InvalidCred(GroupID, UseName, "invalid password");
 	log.info("Testing if agent is able to login with invalid password");
 	try {
 	    Thread.sleep(2000);
@@ -76,7 +67,7 @@ public class LoginTest extends BaseTest{
 	    // TODO Auto-generated catch block
 	    e.printStackTrace();
 	}
-  	
+
     }
-    
+
 }
