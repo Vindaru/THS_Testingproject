@@ -105,7 +105,7 @@ public class BaseTest extends ExcelUtils{
 	
 //        System.out.println("=========================================================================***     END OF AUTOMATION TESTING  ***==============================================================================================================");			
 
-//	driver.quit();
+	driver.quit();
 	 log.info("Browser = Chrome opened successfully");
     }
 }
