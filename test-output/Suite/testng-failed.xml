@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
+  <test name="Test(failed)" parallel="none">
+    <classes>
+      <class name="com.THStest.HomePageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tear_Down"/>
+        </methods>
+      </class> <!-- com.THStest.HomePageTest -->
+      <class name="com.THStest.PortalPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tear_Down"/>
+        </methods>
+      </class> <!-- com.THStest.PortalPageTest -->
+      <class name="com.THStest.BasicInformationPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="verifyBasicinfoPage"/>
+          <include name="tear_Down"/>
+        </methods>
+      </class> <!-- com.THStest.BasicInformationPageTest -->
+      <class name="com.THStest.LoginTest">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="setUp"/>
+          <include name="afterTest"/>
+          <include name="tear_Down"/>
+        </methods>
+      </class> <!-- com.THStest.LoginTest -->
+      <class name="com.THStest.DisConnectPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tear_Down"/>
+        </methods>
+      </class> <!-- com.THStest.DisConnectPageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
