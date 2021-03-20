@@ -5,6 +5,7 @@ package com.THSpages;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -91,7 +92,8 @@ public class LoginPage extends BasePage {
 	log.info("GroupID:" + groupID);
 	log.info("UseName:" + userName);
 	log.info("Password:" + password);
-
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	js.executeScript("window.scrollBy(0,1000)");
 	getGroupID().sendKeys(groupID);
 	Thread.sleep(300);
 	getUserName().sendKeys(userName);
@@ -111,7 +113,8 @@ public class LoginPage extends BasePage {
 	log.info("GroupID:" + groupID);
 	log.info("UseName:" + userName);
 	log.info("Password:" + password);
-
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	js.executeScript("window.scrollBy(0,1000)");
 	getGroupID().sendKeys(groupID);
 	Thread.sleep(300);
 	getUserName().sendKeys(userName);
