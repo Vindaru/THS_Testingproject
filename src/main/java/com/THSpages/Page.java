@@ -61,4 +61,9 @@ public abstract class Page {
 	return null;
     }
 
+    public void waitfForPageHeader(String header) {
+	// TODO Auto-generated method stub
+	
+    }
+
 }

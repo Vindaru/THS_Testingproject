@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 /**
  * @author vdaru
@@ -25,8 +26,7 @@ public class PortalPage extends BasePage {
 
     private By header = By.xpath("//*[@id='product-title']");
     private By PersonalLinesPortal = By.xpath("//*[@id='application-container']/div[2]/div/div/div[1]/form/button");
-    private By portalUserPreferencesbutton = By
-	    .xpath("//*[@id='application-container']/header/div/div/div/div[2]/div[1]/div[2]/div/a[1]");
+    private By portalUserPreferencesbutton = By.xpath("//*[@id='application-container']/header/div/div/div/div[2]/div[1]/div[2]/div/a[1]"); 
 
     public WebElement getHeader() {
 	return getElement(header);
@@ -40,7 +40,7 @@ public class PortalPage extends BasePage {
 	return getPageHeader(header);
     }
 
-    public String getportalUserPreferencesbutton() {
+    public String getPortalUserPreferencesbutton() {
 	return getportalUserPreferencesbutton(portalUserPreferencesbutton);
     }
 
@@ -53,19 +53,23 @@ public class PortalPage extends BasePage {
 	// get instance
 	return getInstance(HomePage.class);
     }
-    
+
     public String UserPreferencebutton() throws InterruptedException {
 	// get instance
-	
-	WebElement UserPreferencebutton = wait.until(ExpectedConditions.elementToBeClickable(portalUserPreferencesbutton));
-	
-	log.info(UserPreferencebutton);
-	UserPreferencebutton.click();
+
+	WebElement UserPreference = wait
+		.until(ExpectedConditions.elementToBeClickable(portalUserPreferencesbutton));
+
+	log.info(UserPreference);
+	UserPreference.click();
 	Thread.sleep(1000);
-	
-	// userpreference page will open, now verify page title = RPM &#8211;  User Preferences &#8211; Tower Hill Insurance
-	
-	String UserPreferencepagetitle = getUserPreferencePageTitle();
+
+	UserPreferencePage UserP = new UserPreferencePage(driver);
+	UserP.getUserPreferencePageTitle();
+
+	log.info(UserP.getUserPreferencePageTitle());
+	Assert.assertEquals(UserP.getUserPreferencePageTitle(),
+		"RPM &#8211;  User Preferences &#8211; Tower Hill Insurance");
 	return null;
     }
 

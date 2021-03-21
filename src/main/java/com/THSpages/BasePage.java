@@ -21,6 +21,7 @@ public class BasePage extends Page {
     public String getPageHeader(By locator) {
 	return getElement(locator).getText();
     }
+
     @Override
     public String getportalUserPreferencesbutton(By locator) {
 	return getElement(locator).getText();
@@ -63,7 +64,7 @@ public class BasePage extends Page {
 
     @Override
     public String getPageTitile() {
-	// TODO Auto-generated method stub
+	// TODO Auto-generated method stub\
 	return driver.getTitle();
     }
 

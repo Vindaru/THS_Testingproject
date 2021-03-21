@@ -5,6 +5,7 @@ package com.THSpages;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -286,9 +287,10 @@ public class HomePage extends BasePage {
 	Thread.sleep(300);
 	List<WebElement> stateDropdown_List = driver.findElements(ths_applicable_States_list);
 	for (int i = 0; i < stateDropdown_List.size(); i++) {
+
 	    WebElement element = stateDropdown_List.get(i);
 	    String stateDropdown_value = element.getAttribute("innerHTML");
-	    log.info(stateDropdown_value);
+	    log.info(stateDropdown_List.size());
 	}
     }
 

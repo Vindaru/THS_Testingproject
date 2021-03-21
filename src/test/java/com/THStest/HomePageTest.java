@@ -25,7 +25,7 @@ public class HomePageTest extends BaseTest {
     private static Logger log = Logger.getLogger(HomePageTest.class.getName() + " ----------------------------------");
 
     @Test(priority = 1)
-    public void getHomePageTitleTest() throws InterruptedException {
+    public void verify_HomePage_Title() throws InterruptedException {
 
 	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
 	Thread.sleep(300);
@@ -41,7 +41,7 @@ public class HomePageTest extends BaseTest {
     }
 
     @Test(priority = 2)
-    public void getHomePageheaderTest() throws InterruptedException {
+    public void verify_HomePage_headerTest() throws InterruptedException {
 	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
 	Thread.sleep(300);
 	HomePage portalpage = page.getInstance(PortalPage.class).PLP_CLICK();
@@ -55,7 +55,7 @@ public class HomePageTest extends BaseTest {
     }
 
     @Test(priority = 3)
-    public void verifyUserdetails() throws InterruptedException {
+    public void verify_HomePage_Userdetails() throws InterruptedException {
 	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
 	Thread.sleep(300);
 	HomePage portalpage = page.getInstance(PortalPage.class).PLP_CLICK();
@@ -69,7 +69,7 @@ public class HomePageTest extends BaseTest {
     }
 
     @Test(priority = 4)
-    public void verifyMenutabs() throws InterruptedException {
+    public void verify_HomePage_Menutabs() throws InterruptedException {
 	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
 	Thread.sleep(300);
 	HomePage portalpage = page.getInstance(PortalPage.class).PLP_CLICK();
@@ -108,7 +108,7 @@ public class HomePageTest extends BaseTest {
 
     // Agency Override
     @Test(priority = 5)
-    public void verifyAgencyOverideTest() throws InterruptedException {
+    public void verify_HomePage_AgencyOverideTest() throws InterruptedException {
 
 	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
 	Thread.sleep(300);
@@ -131,7 +131,7 @@ public class HomePageTest extends BaseTest {
 
     // Quote section verify if all THS applicable states are visible
     @Test(priority = 6)
-    public void verifyTHS_applicableStatesdisplaying() throws InterruptedException, UnsupportedEncodingException {
+    public void verify_HomePage_THS_States_Displaying() throws InterruptedException, UnsupportedEncodingException {
 
 	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
 	Thread.sleep(300);
@@ -147,7 +147,7 @@ public class HomePageTest extends BaseTest {
     }
 
     @Test(priority = 7)
-    public void Select_THS_State_byDATA() throws InterruptedException {
+    public void Select_THS_State_ExelData() throws InterruptedException {
 
 	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
 	Thread.sleep(300);
