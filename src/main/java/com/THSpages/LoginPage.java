@@ -25,6 +25,7 @@ public class LoginPage extends BasePage {
     private By submitButton = By.xpath("//*[@id='authSubmit']");
     private By header = By.xpath("//*[@id='loginTitle']");
     private By invalid_credentials = By.xpath("//*[@id='errorMessage']");
+    private By towerHillimage = By.id("towerRound");
 
 //    private String GroupID = "";
 
@@ -87,6 +88,13 @@ public class LoginPage extends BasePage {
 	return getPageHeader(header);
     }
 
+    /**
+     * @return the towerHillimage
+     */
+    public WebElement gettowerHillimage() {
+	return getElement(towerHillimage);
+    }
+
     public PortalPage doLogin(String groupID, String userName, String password) throws InterruptedException {
 
 	log.info("GroupID:" + groupID);
@@ -129,6 +137,14 @@ public class LoginPage extends BasePage {
 //  	Assert.assertEquals(Test_InvalidCreditionals, "get instance Authentication Failed. Please check your credentials and try again. &nbsp;&nbsp;"); 
 
 	return getInstance(PortalPage.class);
+
+    }
+
+    public void dotesttowerhillimage() {
+
+	boolean logoPresent = driver.findElement(towerHillimage).isDisplayed();
+	Assert.assertTrue(logoPresent);
+	log.info("TowerHill image displaying as 'towerRound'   ");
 
     }
 

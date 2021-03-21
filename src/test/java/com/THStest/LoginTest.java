@@ -4,6 +4,9 @@
 package com.THStest;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import com.THSpages.LoginPage;
@@ -20,13 +23,12 @@ public class LoginTest extends BaseTest {
     private static Logger log = Logger.getLogger(LoginTest.class.getName() + " ----------------------------------");
 
     @Test(priority = 1)
-    public void verifyUserNamedisplaying() {
+    public void verifyloginpageTitle() {
 
-	// Verify if the agent login name is displaying in the Portal Page
 	String LoginInPageTitle = page.getInstance(LoginPage.class).getPageTitile();
 	log.info(LoginInPageTitle);
 	Assert.assertEquals(LoginInPageTitle, "Tower Hill Insurance Group - Login");
-    }
+    } // *[@id="towerRound"]
 
     @Test(priority = 2)
     public void verifyLoginPageheaderTest() {
@@ -68,6 +70,12 @@ public class LoginTest extends BaseTest {
 	    e.printStackTrace();
 	}
 
+    }
+
+    @Test(priority = 1)
+    public void verifytowerhillimagedisplayingonLoginPage() {
+
+	page.getInstance(LoginPage.class).dotesttowerhillimage();
     }
 
 }

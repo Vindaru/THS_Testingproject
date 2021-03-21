@@ -1,4 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="12258" started-at="2021-03-20T23:56:59Z" finished-at="2021-03-20T23:57:11Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="12258" started-at="2021-03-20T23:56:59Z" finished-at="2021-03-20T23:57:11Z">
+      <class name="com.THStest.PortalPageTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.THStest.PortalPageTest@3fd7a715]" name="beforeTest" is-config="true" duration-ms="16" started-at="2021-03-20T19:56:59Z" finished-at="2021-03-20T19:56:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.THStest.PortalPageTest@3fd7a715]" name="setUp" is-config="true" duration-ms="6096" started-at="2021-03-20T19:56:59Z" finished-at="2021-03-20T19:57:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyportalpageUserPreferencesbuttondisoplaying()[pri:1, instance:com.THStest.PortalPageTest@3fd7a715]" name="verifyportalpageUserPreferencesbuttondisoplaying" duration-ms="6121" started-at="2021-03-20T19:57:05Z" finished-at="2021-03-20T19:57:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyportalpageUserPreferencesbuttondisoplaying -->
+        <test-method status="PASS" signature="tear_Down()[pri:0, instance:com.THStest.PortalPageTest@3fd7a715]" name="tear_Down" is-config="true" duration-ms="0" started-at="2021-03-20T19:57:11Z" finished-at="2021-03-20T19:57:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear_Down -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.THStest.PortalPageTest@3fd7a715]" name="afterTest" is-config="true" duration-ms="0" started-at="2021-03-20T19:57:11Z" finished-at="2021-03-20T19:57:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.THStest.PortalPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+=======
 <testng-results skipped="0" failed="0" total="15" passed="15">
   <reporter-output>
   </reporter-output>
@@ -206,4 +239,5 @@
       </class> <!-- com.THStest.PortalPageTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
+>>>>>>> eafdb06888d49704ef97a959dbd02d1ea54e9859
 </testng-results>
