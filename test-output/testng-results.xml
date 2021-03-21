@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
@@ -30,4 +31,213 @@
       </class> <!-- com.THStest.PortalPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
+=======
+<testng-results skipped="0" failed="0" total="15" passed="15">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="202284" started-at="2021-03-20T01:11:37Z" finished-at="2021-03-20T01:14:59Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="202284" started-at="2021-03-20T01:11:37Z" finished-at="2021-03-20T01:14:59Z">
+      <class name="com.THStest.LoginTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.THStest.LoginTest@670002]" name="beforeTest" is-config="true" duration-ms="8" started-at="2021-03-19T21:11:37Z" finished-at="2021-03-19T21:11:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.THStest.LoginTest@670002]" name="setUp" is-config="true" duration-ms="4596" started-at="2021-03-19T21:11:37Z" finished-at="2021-03-19T21:11:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyUserNamedisplaying()[pri:1, instance:com.THStest.LoginTest@670002]" name="verifyUserNamedisplaying" duration-ms="14" started-at="2021-03-19T21:11:42Z" finished-at="2021-03-19T21:11:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserNamedisplaying -->
+        <test-method status="PASS" signature="tear_Down()[pri:0, instance:com.THStest.LoginTest@670002]" name="tear_Down" is-config="true" duration-ms="732" started-at="2021-03-19T21:11:42Z" finished-at="2021-03-19T21:11:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear_Down -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.THStest.LoginTest@670002]" name="setUp" is-config="true" duration-ms="3588" started-at="2021-03-19T21:12:40Z" finished-at="2021-03-19T21:12:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyLoginPageheaderTest()[pri:2, instance:com.THStest.LoginTest@670002]" name="verifyLoginPageheaderTest" duration-ms="26" started-at="2021-03-19T21:12:44Z" finished-at="2021-03-19T21:12:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginPageheaderTest -->
+        <test-method status="PASS" signature="tear_Down()[pri:0, instance:com.THStest.LoginTest@670002]" name="tear_Down" is-config="true" duration-ms="763" started-at="2021-03-19T21:12:44Z" finished-at="2021-03-19T21:12:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear_Down -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.THStest.LoginTest@670002]" name="setUp" is-config="true" duration-ms="3653" started-at="2021-03-19T21:13:22Z" finished-at="2021-03-19T21:13:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="performLoginTest_validvalues()[pri:3, instance:com.THStest.LoginTest@670002]" name="performLoginTest_validvalues" duration-ms="5770" started-at="2021-03-19T21:13:25Z" finished-at="2021-03-19T21:13:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- performLoginTest_validvalues -->
+        <test-method status="PASS" signature="tear_Down()[pri:0, instance:com.THStest.LoginTest@670002]" name="tear_Down" is-config="true" duration-ms="761" started-at="2021-03-19T21:13:31Z" finished-at="2021-03-19T21:13:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear_Down -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.THStest.LoginTest@670002]" name="setUp" is-config="true" duration-ms="3590" started-at="2021-03-19T21:13:45Z" finished-at="2021-03-19T21:13:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="performLoginTest_invalidvalues()[pri:4, instance:com.THStest.LoginTest@670002]" name="performLoginTest_invalidvalues" duration-ms="3713" started-at="2021-03-19T21:13:48Z" finished-at="2021-03-19T21:13:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- performLoginTest_invalidvalues -->
+        <test-method status="PASS" signature="tear_Down()[pri:0, instance:com.THStest.LoginTest@670002]" name="tear_Down" is-config="true" duration-ms="808" started-at="2021-03-19T21:13:52Z" finished-at="2021-03-19T21:13:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear_Down -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.THStest.LoginTest@670002]" name="afterTest" is-config="true" duration-ms="7" started-at="2021-03-19T21:14:59Z" finished-at="2021-03-19T21:14:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.THStest.LoginTest -->
+      <class name="com.THStest.BasicInformationPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.THStest.BasicInformationPageTest@6e0dec4a]" name="setUp" is-config="true" duration-ms="4229" started-at="2021-03-19T21:12:22Z" finished-at="2021-03-19T21:12:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyBascinformantionLabels()[pri:1, instance:com.THStest.BasicInformationPageTest@6e0dec4a]" name="verifyBascinformantionLabels" duration-ms="13602" started-at="2021-03-19T21:12:26Z" finished-at="2021-03-19T21:12:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBascinformantionLabels -->
+        <test-method status="PASS" signature="tear_Down()[pri:0, instance:com.THStest.BasicInformationPageTest@6e0dec4a]" name="tear_Down" is-config="true" duration-ms="830" started-at="2021-03-19T21:12:39Z" finished-at="2021-03-19T21:12:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear_Down -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.THStest.BasicInformationPageTest@6e0dec4a]" name="setUp" is-config="true" duration-ms="3630" started-at="2021-03-19T21:12:58Z" finished-at="2021-03-19T21:13:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyBasicinfoPage()[pri:2, instance:com.THStest.BasicInformationPageTest@6e0dec4a]" name="verifyBasicinfoPage" duration-ms="19749" started-at="2021-03-19T21:13:01Z" finished-at="2021-03-19T21:13:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBasicinfoPage -->
+        <test-method status="PASS" signature="tear_Down()[pri:0, instance:com.THStest.BasicInformationPageTest@6e0dec4a]" name="tear_Down" is-config="true" duration-ms="796" started-at="2021-03-19T21:13:21Z" finished-at="2021-03-19T21:13:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear_Down -->
+      </class> <!-- com.THStest.BasicInformationPageTest -->
+      <class name="com.THStest.DisConnectPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.THStest.DisConnectPageTest@49c386c8]" name="setUp" is-config="true" duration-ms="3709" started-at="2021-03-19T21:11:54Z" finished-at="2021-03-19T21:11:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="performDisconnectsessionTest()[pri:1, instance:com.THStest.DisConnectPageTest@49c386c8]" name="performDisconnectsessionTest" duration-ms="9461" started-at="2021-03-19T21:11:58Z" finished-at="2021-03-19T21:12:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- performDisconnectsessionTest -->
+        <test-method status="PASS" signature="tear_Down()[pri:0, instance:com.THStest.DisConnectPageTest@49c386c8]" name="tear_Down" is-config="true" duration-ms="819" started-at="2021-03-19T21:12:07Z" finished-at="2021-03-19T21:12:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear_Down -->
+      </class> <!-- com.THStest.DisConnectPageTest -->
+      <class name="com.THStest.HomePageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.THStest.HomePageTest@56528192]" name="setUp" is-config="true" duration-ms="3663" started-at="2021-03-19T21:12:08Z" finished-at="2021-03-19T21:12:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="getHomePageTitleTest()[pri:1, instance:com.THStest.HomePageTest@56528192]" name="getHomePageTitleTest" duration-ms="9139" started-at="2021-03-19T21:12:12Z" finished-at="2021-03-19T21:12:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getHomePageTitleTest -->
+        <test-method status="PASS" signature="tear_Down()[pri:0, instance:com.THStest.HomePageTest@56528192]" name="tear_Down" is-config="true" duration-ms="806" started-at="2021-03-19T21:12:21Z" finished-at="2021-03-19T21:12:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear_Down -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.THStest.HomePageTest@56528192]" name="setUp" is-config="true" duration-ms="3682" started-at="2021-03-19T21:12:45Z" finished-at="2021-03-19T21:12:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="getHomePageheaderTest()[pri:2, instance:com.THStest.HomePageTest@56528192]" name="getHomePageheaderTest" duration-ms="8361" started-at="2021-03-19T21:12:48Z" finished-at="2021-03-19T21:12:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getHomePageheaderTest -->
+        <test-method status="PASS" signature="tear_Down()[pri:0, instance:com.THStest.HomePageTest@56528192]" name="tear_Down" is-config="true" duration-ms="834" started-at="2021-03-19T21:12:57Z" finished-at="2021-03-19T21:12:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear_Down -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.THStest.HomePageTest@56528192]" name="setUp" is-config="true" duration-ms="3817" started-at="2021-03-19T21:13:32Z" finished-at="2021-03-19T21:13:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyUserdetails()[pri:3, instance:com.THStest.HomePageTest@56528192]" name="verifyUserdetails" duration-ms="8375" started-at="2021-03-19T21:13:36Z" finished-at="2021-03-19T21:13:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserdetails -->
+        <test-method status="PASS" signature="tear_Down()[pri:0, instance:com.THStest.HomePageTest@56528192]" name="tear_Down" is-config="true" duration-ms="791" started-at="2021-03-19T21:13:44Z" finished-at="2021-03-19T21:13:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear_Down -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.THStest.HomePageTest@56528192]" name="setUp" is-config="true" duration-ms="3570" started-at="2021-03-19T21:13:53Z" finished-at="2021-03-19T21:13:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyMenutabs()[pri:4, instance:com.THStest.HomePageTest@56528192]" name="verifyMenutabs" duration-ms="9276" started-at="2021-03-19T21:13:57Z" finished-at="2021-03-19T21:14:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMenutabs -->
+        <test-method status="PASS" signature="tear_Down()[pri:0, instance:com.THStest.HomePageTest@56528192]" name="tear_Down" is-config="true" duration-ms="857" started-at="2021-03-19T21:14:06Z" finished-at="2021-03-19T21:14:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear_Down -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.THStest.HomePageTest@56528192]" name="setUp" is-config="true" duration-ms="3654" started-at="2021-03-19T21:14:07Z" finished-at="2021-03-19T21:14:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyAgencyOverideTest()[pri:5, instance:com.THStest.HomePageTest@56528192]" name="verifyAgencyOverideTest" duration-ms="14053" started-at="2021-03-19T21:14:10Z" finished-at="2021-03-19T21:14:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAgencyOverideTest -->
+        <test-method status="PASS" signature="tear_Down()[pri:0, instance:com.THStest.HomePageTest@56528192]" name="tear_Down" is-config="true" duration-ms="850" started-at="2021-03-19T21:14:24Z" finished-at="2021-03-19T21:14:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear_Down -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.THStest.HomePageTest@56528192]" name="setUp" is-config="true" duration-ms="4180" started-at="2021-03-19T21:14:25Z" finished-at="2021-03-19T21:14:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="verifyTHS_applicableStatesdisplaying()[pri:6, instance:com.THStest.HomePageTest@56528192]" name="verifyTHS_applicableStatesdisplaying" duration-ms="9806" started-at="2021-03-19T21:14:29Z" finished-at="2021-03-19T21:14:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTHS_applicableStatesdisplaying -->
+        <test-method status="PASS" signature="tear_Down()[pri:0, instance:com.THStest.HomePageTest@56528192]" name="tear_Down" is-config="true" duration-ms="837" started-at="2021-03-19T21:14:39Z" finished-at="2021-03-19T21:14:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear_Down -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.THStest.HomePageTest@56528192]" name="setUp" is-config="true" duration-ms="4390" started-at="2021-03-19T21:14:40Z" finished-at="2021-03-19T21:14:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="Select_THS_State_byDATA()[pri:7, instance:com.THStest.HomePageTest@56528192]" name="Select_THS_State_byDATA" duration-ms="14125" started-at="2021-03-19T21:14:45Z" finished-at="2021-03-19T21:14:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Select_THS_State_byDATA -->
+        <test-method status="PASS" signature="tear_Down()[pri:0, instance:com.THStest.HomePageTest@56528192]" name="tear_Down" is-config="true" duration-ms="822" started-at="2021-03-19T21:14:59Z" finished-at="2021-03-19T21:14:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear_Down -->
+      </class> <!-- com.THStest.HomePageTest -->
+      <class name="com.THStest.PortalPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.THStest.PortalPageTest@1f0f1111]" name="setUp" is-config="true" duration-ms="3652" started-at="2021-03-19T21:11:43Z" finished-at="2021-03-19T21:11:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="performPortalTest()[pri:1, instance:com.THStest.PortalPageTest@1f0f1111]" name="performPortalTest" duration-ms="7124" started-at="2021-03-19T21:11:46Z" finished-at="2021-03-19T21:11:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- performPortalTest -->
+        <test-method status="PASS" signature="tear_Down()[pri:0, instance:com.THStest.PortalPageTest@1f0f1111]" name="tear_Down" is-config="true" duration-ms="717" started-at="2021-03-19T21:11:53Z" finished-at="2021-03-19T21:11:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tear_Down -->
+      </class> <!-- com.THStest.PortalPageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+>>>>>>> eafdb06888d49704ef97a959dbd02d1ea54e9859
 </testng-results>
