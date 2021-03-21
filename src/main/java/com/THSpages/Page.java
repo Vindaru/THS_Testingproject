@@ -46,4 +46,19 @@ public abstract class Page {
 	return null;
     }
 
+    public String getTowerHillImage(By locator) {
+	// TODO Auto-generated method stub
+	return null;
+    }
+
+    public String getlogOutbutton(By locator) {
+	// TODO Auto-generated method stub
+	return null;
+    }
+
+    public String getportalUserPreferencesbutton(By locator) {
+	// TODO Auto-generated method stub
+	return null;
+    }
+
 }

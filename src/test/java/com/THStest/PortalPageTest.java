@@ -28,6 +28,18 @@ public class PortalPageTest extends BaseTest {
      * 
      */
     @Test(priority = 1)
+    public void verifyportalpageUserPreferencesbuttondisoplaying() throws InterruptedException {
+
+	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
+	Thread.sleep(300);
+	String portallogOutbutton = page.getInstance(PortalPage.class).UserPreferencebutton();
+	Thread.sleep(300);
+	log.info(portallogOutbutton);
+	Assert.assertEquals(portallogOutbutton, "User Preferences");
+	// verify if the button is clickible 
+    } 
+
+    @Test(priority = 2)
     public void performPortalTest() throws InterruptedException {
 
 	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
@@ -38,5 +50,4 @@ public class PortalPageTest extends BaseTest {
 	log.info(HomePageHeader);
 	Assert.assertEquals(HomePageHeader, "RATING & POLICY MANAGEMENT");
     }
-
 }

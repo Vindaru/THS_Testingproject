@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.THStest.HomePageTest">
+      <class name="com.THStest.LoginTest">
         <methods>
-          <include name="verifyTHS_applicableStatesdisplaying"/>
+          <include name="verifytowerhillimagedisplayingonLoginPage"/>
           <include name="beforeTest"/>
           <include name="setUp"/>
           <include name="afterTest"/>
           <include name="tear_Down"/>
         </methods>
-      </class> <!-- com.THStest.HomePageTest -->
+      </class> <!-- com.THStest.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
