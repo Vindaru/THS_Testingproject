@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="26066" started-at="2021-03-21T04:29:11Z" finished-at="2021-03-21T04:29:38Z">
+  <suite name="Default suite" duration-ms="27488" started-at="2021-03-22T20:10:19Z" finished-at="2021-03-22T20:10:47Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="26066" started-at="2021-03-21T04:29:11Z" finished-at="2021-03-21T04:29:38Z">
+    <test name="Default test" duration-ms="27488" started-at="2021-03-22T20:10:19Z" finished-at="2021-03-22T20:10:47Z">
       <class name="com.THStest.BasicInformationPageTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.THStest.BasicInformationPageTest@3fd7a715]" name="beforeTest" is-config="true" duration-ms="13" started-at="2021-03-21T00:29:12Z" finished-at="2021-03-21T00:29:12Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.THStest.BasicInformationPageTest@3fd7a715]" name="beforeTest" is-config="true" duration-ms="9" started-at="2021-03-22T16:10:19Z" finished-at="2021-03-22T16:10:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.THStest.BasicInformationPageTest@3fd7a715]" name="setUp" is-config="true" duration-ms="5294" started-at="2021-03-21T00:29:12Z" finished-at="2021-03-21T00:29:17Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.THStest.BasicInformationPageTest@3fd7a715]" name="setUp" is-config="true" duration-ms="4758" started-at="2021-03-22T16:10:19Z" finished-at="2021-03-22T16:10:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verify_BasicinformationPage_ExelData()[pri:2, instance:com.THStest.BasicInformationPageTest@3fd7a715]" name="verify_BasicinformationPage_ExelData" duration-ms="20740" started-at="2021-03-21T00:29:17Z" finished-at="2021-03-21T00:29:38Z">
+        <test-method status="PASS" signature="verify_BasicinformationPage_ExelData()[pri:4, instance:com.THStest.BasicInformationPageTest@3fd7a715]" name="verify_BasicinformationPage_ExelData" duration-ms="22697" started-at="2021-03-22T16:10:24Z" finished-at="2021-03-22T16:10:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_BasicinformationPage_ExelData -->
-        <test-method status="PASS" signature="tear_Down()[pri:0, instance:com.THStest.BasicInformationPageTest@3fd7a715]" name="tear_Down" is-config="true" duration-ms="0" started-at="2021-03-21T00:29:38Z" finished-at="2021-03-21T00:29:38Z">
+        <test-method status="PASS" signature="tear_Down()[pri:0, instance:com.THStest.BasicInformationPageTest@3fd7a715]" name="tear_Down" is-config="true" duration-ms="1" started-at="2021-03-22T16:10:47Z" finished-at="2021-03-22T16:10:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tear_Down -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.THStest.BasicInformationPageTest@3fd7a715]" name="afterTest" is-config="true" duration-ms="1" started-at="2021-03-21T00:29:38Z" finished-at="2021-03-21T00:29:38Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.THStest.BasicInformationPageTest@3fd7a715]" name="afterTest" is-config="true" duration-ms="1" started-at="2021-03-22T16:10:47Z" finished-at="2021-03-22T16:10:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

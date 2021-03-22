@@ -25,7 +25,7 @@ public class BasicInformationPage extends BasePage {
     private static Logger log = Logger
 	    .getLogger(BasicInformationPage.class.getName() + " ----------------------------------");
 
-    private By header = By.xpath("//*[@id='addressValidator']/div[1]/div");
+    private By header = By.id("//*[@id='addressValidator']/div[1]/div/h3");  //*[@id='addressValidator']/div[1]/div/h3
     private By BusinessOwned_lable = By.xpath(
 	    "/html/body/div[1]/div[4]/div[1]/div[2]/div/div[2]/div/form/section/div[2]/div[1]/div[1]/div[1]/label");
     private By InsuredFirstName_lable = By.xpath(
@@ -49,19 +49,30 @@ public class BasicInformationPage extends BasePage {
     private By validateButton = By
 	    .xpath("/html/body/div[1]/div[4]/div[1]/div[2]/div/div[2]/div/form/section/div[5]/span");
     private By FirstName = By.name("policyTerm|primaryInsured|firstName");
+   
     private By LastName = By.name("policyTerm|primaryInsured|lastName");
+   
     private By Address = By.name("policyTerm|location|address|street");
+   
     private By City = By.name("policyTerm|location|address|city");
+   
     private By Zipcode = By.name("policyTerm|location|address|zipCode");
+   
     private By DOB = By.name("policyTerm|primaryInsured|dateOfBirth");
+   
     private By Occupancy = By.name("policyTerm|location|occupancy");
+   
     private By Fire_Hyderant = By.name("policyTerm|location|nearFireHydrant");
+   
     private By ValidateButton_Click = By.id("validate-address-button");
+  
     private By resultmapperheader = By.xpath("//*[@id='addressValidatorMappingResults']/div[1]");
-    private By selectAddressbutton = By.xpath("//*[@id='addressValidatorMappingResults']/div[2]/div[1]/div");
+   
+    private By selectAddressbutton = By.xpath("//*[@id='addressValidatorMappingResults']/div[2]/div[1]");
+
     private By LatLongbutton = By.xpath("//*[@id='addressValidatorMappingResults']/div[3]/div[1]/div");
 
-    /**
+    /**//*[@id="addressValidatorMappingResults"]/div[2]/div[1]
      * @return the address
      */
     public String getresultmapperheader() {
@@ -89,7 +100,7 @@ public class BasicInformationPage extends BasePage {
     public WebElement getLatLongbutton() {
 	return getElement(LatLongbutton);
     }
-    
+
     /**
      * @return the city
      */
@@ -277,17 +288,18 @@ public class BasicInformationPage extends BasePage {
     }
 
     public void doBasicinformationPagevalidation(String firstname, String lastname, String address, String city,
-	    int zipcode, String dateofbirth, String occupancy, String firehydrant) throws InterruptedException {
+	    int zipcode, String dateofbirth, String occupancy, String firehydrant, String state)
+	    throws InterruptedException {
 
 	log.info("Firstname:" + firstname);
 	log.info("LastName:" + lastname);
 	log.info("address:" + address);
 	log.info("city:" + city);
+	log.info("State" + state);
 	log.info("zipcode:" + zipcode);
 	log.info("dateofbirth:" + dateofbirth);
 	log.info("occpancy:" + occupancy);
 	log.info("fireHydrant:" + firehydrant);
-
 	Thread.sleep(500);
 	getFirstName().sendKeys(firstname);
 	Thread.sleep(500);
@@ -301,9 +313,10 @@ public class BasicInformationPage extends BasePage {
 	Thread.sleep(500);
 	getDOB().sendKeys(dateofbirth);
 	Thread.sleep(500);
-	Select selectOccupancy = new Select(driver.findElement(Occupancy));
-	selectOccupancy.selectByVisibleText(occupancy);
-
+	OccupancyPage OP = new OccupancyPage(driver);
+	OP.OccupancyValues(state, occupancy);
+	Thread.sleep(500);
+	OP.SelectOccupancy(state, occupancy);
 	Thread.sleep(500);
 	List<WebElement> radioButton = driver.findElements(Fire_Hyderant);
 	System.out.println(radioButton.size());
@@ -321,51 +334,28 @@ public class BasicInformationPage extends BasePage {
 	    }
 	} else {
 	    log.info("Please provide 'YES' /  'NO' ");
-
 	}
 	Thread.sleep(500);
 	getValidateButton_Click().click();
-	Thread.sleep(100);
+	Thread.sleep(2000);
 
+	String lable = getSelectAddressbutton().getText();
+	log.info(lable);
+	if(lable.matches("Select Address")){
+	    log.info("Select Address Button is present ");
+		Thread.sleep(500);
+	    getSelectAddressbutton().click();
+	    }else{
+		 log.info("Select Address Button is not present present ");
+	    }
+	
+	
 	return;
     }
-
-////  MAPPING RESULTS
-
-// verify Mapping results header is displaying or not when valadate risk address button is clicked
-
-    public void verify_MappingResults_header() {
-
-	WebDriverWait wait = new WebDriverWait(driver, 15);
-
-	wait.until(ExpectedConditions.visibilityOfElementLocated(resultmapperheader));
-	String mappingResults = driver.findElement(resultmapperheader).getText();
-	log.info("MappingResults----" + mappingResults);
-	Assert.assertEquals(mappingResults, "Mapping Results");
-
-    }
-
-// check if Select Address button and Enter Lat/Long is displaying, when displaying click and check results 
-    public boolean verigy_addressvalidationbuttonsdisplaying() {
-	 
-	WebDriverWait wait = new WebDriverWait(driver, 15);
-
-	wait.until(ExpectedConditions.visibilityOfElementLocated(resultmapperheader));
-	
-	List<WebElement> buttons = driver.findElements(By.xpath("//button[@class = 'ember-view btn thig-btn btn-block']"));
-	log.info(buttons);
-	    if (buttons.size() > 0 && buttons.get(0).isDisplayed())
-	    {
-	        return true;
-	    }
-	    return false;
-	} 
-
+ 
     public BasicInformationPage(WebDriver driver) {
 	super(driver);
 	// TODO Auto-generated constructor stub
     }
-
-   
 
 }

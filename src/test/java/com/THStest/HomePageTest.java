@@ -159,7 +159,7 @@ public class HomePageTest extends BaseTest {
 	// test Agency Override label displaying
 	Thread.sleep(300);
 	BasicInformationPage basicinformationpage = page.getInstance(HomePage.class)
-		.doSelectStateByDataprovided(stateSelect);
+		.doSelectStateByDataprovided(RiskState);
 	Thread.sleep(300);
 	String BIPageHeader = basicinformationpage.getBasicinfopagePageHeader();
 	log.info(BIPageHeader);

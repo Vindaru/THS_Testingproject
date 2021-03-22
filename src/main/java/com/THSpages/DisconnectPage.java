@@ -30,12 +30,9 @@ public class DisconnectPage extends BasePage {
     }
 
     public HomePage DisconnectSession_button() {
-
 	getDisconnectSession().click();
-
 	// get instance
 	return getInstance(HomePage.class);
-
     }
 
     public DisconnectPage(WebDriver driver) {

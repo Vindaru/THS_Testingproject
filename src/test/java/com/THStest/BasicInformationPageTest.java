@@ -34,19 +34,21 @@ public class BasicInformationPageTest extends BaseTest {
     // header
     @Test(priority = 1)
     public void verify_BasicinformationPage_header() throws InterruptedException {
+	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
+	Thread.sleep(300);
+	page.getInstance(PortalPage.class).PLP_CLICK();
+	Thread.sleep(300);
+	page.getInstance(DisconnectPage.class).DisconnectSession_button();
+	Thread.sleep(1000);
+	page.getInstance(HomePage.class).doSelectStateByDataprovided(RiskState);
+	Thread.sleep(1000);
 	String basicinfoPageheader = page.getInstance(BasicInformationPage.class).getBasicinfopagePageHeader();
+//	Assert.assertEquals(basicinfoPageheader, "RATING & POLICY MANAGEMENT");
 	log.info("Basic information page header -- " + basicinfoPageheader);
     }
 
-    // title
-    @Test(priority = 1)
-    public void verify_BasicinformationPage_title() throws InterruptedException {
-	String basicinfoPagetitle = page.getInstance(BasicInformationPage.class).getPageTitile();
-	log.info("Basic information page title -- " + basicinfoPagetitle);
-    }
-
     // verify lables displaying
-    @Test(priority = 1)
+    @Test(priority = 3)
     public void verify_BasicinformationPage_Labels() throws InterruptedException {
 
 	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
@@ -56,37 +58,14 @@ public class BasicInformationPageTest extends BaseTest {
 	page.getInstance(DisconnectPage.class).DisconnectSession_button();
 	Thread.sleep(300);
 	// homepage select state
-	page.getInstance(HomePage.class).doSelectStateByDataprovided(stateSelect);
-	// basic information page
-
-	// check if all the labels are displaying as expected
-	// validateInsurefirstandlastname
+	page.getInstance(HomePage.class).doSelectStateByDataprovided(RiskState);
 
 	page.getInstance(BasicInformationPage.class).getBasicinformationpageLables();
 
     }
 
-    @Test(priority = 2)
-    public void verify_BasicinformationPage_MappingResults() throws InterruptedException {
-
-	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
-	Thread.sleep(300);
-	page.getInstance(PortalPage.class).PLP_CLICK();
-	Thread.sleep(300);
-	page.getInstance(DisconnectPage.class).DisconnectSession_button();
-	Thread.sleep(300);
-	// homepage select state
-	page.getInstance(HomePage.class).doSelectStateByDataprovided(stateSelect);
-	// basic information page
-	Thread.sleep(500);
-	page.getInstance(BasicInformationPage.class).doBasicinformationPagevalidation(FirstName, LastName, RiskAddress,
-		RiskCity, RiskZipcode, DOB, Occupancy, FireHyderate);
-// verify if Mapping results are displaying after Validate button is clicked
-    }
-
-    @Test(priority = 2)
+    @Test(priority = 4)
     public void verify_BasicinformationPage_ExelData() throws InterruptedException {
-
 	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
 	Thread.sleep(300);
 	page.getInstance(PortalPage.class).PLP_CLICK();
@@ -94,16 +73,11 @@ public class BasicInformationPageTest extends BaseTest {
 	page.getInstance(DisconnectPage.class).DisconnectSession_button();
 	Thread.sleep(300);
 	// homepage select state
-	page.getInstance(HomePage.class).doSelectStateByDataprovided(stateSelect);
+	page.getInstance(HomePage.class).doSelectStateByDataprovided(RiskState);
 	// basic information page
 	Thread.sleep(500);
 	page.getInstance(BasicInformationPage.class).doBasicinformationPagevalidation(FirstName, LastName, RiskAddress,
-		RiskCity, RiskZipcode, DOB, Occupancy, FireHyderate);
+		RiskCity, RiskZipcode, DOB, Occupancy, FireHyderate, RiskState);
 	Thread.sleep(1000);
-       // verify if Mapping results are displaying after Validate button is clicked verify_selctbutton_EnterLatLong
-	page.getInstance(BasicInformationPage.class).verify_MappingResults_header();
-	page.getInstance(BasicInformationPage.class).verigy_addressvalidationbuttonsdisplaying();
-
     }
-
 }

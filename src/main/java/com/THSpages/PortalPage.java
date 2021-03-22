@@ -26,7 +26,8 @@ public class PortalPage extends BasePage {
 
     private By header = By.xpath("//*[@id='product-title']");
     private By PersonalLinesPortal = By.xpath("//*[@id='application-container']/div[2]/div/div/div[1]/form/button");
-    private By portalUserPreferencesbutton = By.xpath("//*[@id='application-container']/header/div/div/div/div[2]/div[1]/div[2]/div/a[1]"); 
+    private By portalUserPreferencesbutton = By
+	    .xpath("//*[@id='application-container']/header/div/div/div/div[2]/div[1]/div[2]/div/a[1]");
 
     public WebElement getHeader() {
 	return getElement(header);
@@ -48,17 +49,20 @@ public class PortalPage extends BasePage {
 	return getElement(PersonalLinesPortal);
     }
 
-    public HomePage PLP_CLICK() {
+    public HomePage PLP_CLICK() throws InterruptedException {
 	getPersonalLinesPortal().click();
+	
+	Thread.sleep(1000);
+
 	// get instance
-	return getInstance(HomePage.class);
+		return getInstance(HomePage.class);	
     }
+
 
     public String UserPreferencebutton() throws InterruptedException {
 	// get instance
 
-	WebElement UserPreference = wait
-		.until(ExpectedConditions.elementToBeClickable(portalUserPreferencesbutton));
+	WebElement UserPreference = wait.until(ExpectedConditions.elementToBeClickable(portalUserPreferencesbutton));
 
 	log.info(UserPreference);
 	UserPreference.click();

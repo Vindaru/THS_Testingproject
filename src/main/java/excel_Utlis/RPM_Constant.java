@@ -9,7 +9,7 @@ public class RPM_Constant {
     public static final String URL_BETA = "https://oasis.beta.thig.com/";
 
     // file paths
-    public static final String Path_TestData = "C:\\Users\\vdaru\\eclipse-workspace\\THS_Project\\";
+    public static final String Path_TestData = "C:\\Users\\vdaru\\Desktop\\THS Git Repository\\THS_Project\\";
     public static final String File_TestData = "THS_TestData.xlsx";
 
 }

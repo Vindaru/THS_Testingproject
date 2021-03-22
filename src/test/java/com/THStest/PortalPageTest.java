@@ -46,8 +46,6 @@ public class PortalPageTest extends BaseTest {
 	Thread.sleep(300);
 	HomePage portalpage = page.getInstance(PortalPage.class).PLP_CLICK();
 	Thread.sleep(300);
-	String HomePageHeader = portalpage.getHomePageHeader();
-	log.info(HomePageHeader);
-	Assert.assertEquals(HomePageHeader, "RATING & POLICY MANAGEMENT");
+
     }
 }
