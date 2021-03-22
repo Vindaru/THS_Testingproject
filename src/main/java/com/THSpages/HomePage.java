@@ -294,13 +294,13 @@ public class HomePage extends BasePage {
 	}
     }
 
-    public BasicInformationPage doSelectStateByDataprovided(String stateSelect) throws InterruptedException {
-	log.info("Select State  :" + stateSelect);
+    public BasicInformationPage doSelectStateByDataprovided(String riskState) throws InterruptedException {
+	log.info("Select State  :" + riskState);
 	getquotes_Select_States().click();
 	Thread.sleep(500);
-	driver.findElement(By.linkText(stateSelect)).click();
+	driver.findElement(By.linkText(riskState)).click();
 	Thread.sleep(500);
-	log.info("successfully selected state :  " + stateSelect);
+	log.info("successfully selected state :  " + riskState);
 	return getInstance(BasicInformationPage.class);
     }
 
