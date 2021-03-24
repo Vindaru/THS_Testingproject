@@ -77,7 +77,7 @@ public class BasicInformationPageTest extends BaseTest {
 	// basic information page
 	Thread.sleep(500);
 	page.getInstance(BasicInformationPage.class).doBasicinformationPagevalidation(FirstName, LastName, RiskAddress,
-		RiskCity, RiskZipcode, DOB, Occupancy, FireHyderate, RiskState);
+		RiskCity, RiskZipcode, DOB, Occupancy, FireHyderate, RiskState, YearBuilt, ReneovatedHome, PolicyForm);
 	Thread.sleep(1000);
     }
 }

@@ -288,7 +288,8 @@ public class BasicInformationPage extends BasePage {
     }
 
     public void doBasicinformationPagevalidation(String firstname, String lastname, String address, String city,
-	    int zipcode, String dateofbirth, String occupancy, String firehydrant, String state)
+	    int zipcode, String dateofbirth, String occupancy, String firehydrant, String state, int yearBuilt,
+	    String reneovatedHome, String policyForm)
 	    throws InterruptedException {
 
 	log.info("Firstname:" + firstname);
@@ -338,7 +339,8 @@ public class BasicInformationPage extends BasePage {
 	Thread.sleep(500);
 	getValidateButton_Click().click();
 	Thread.sleep(2000);
-
+	WebDriverWait wait = new WebDriverWait(driver, 15);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(selectAddressbutton));
 	String lable = getSelectAddressbutton().getText();
 	log.info(lable);
 	if(lable.matches("Select Address")){
@@ -348,6 +350,18 @@ public class BasicInformationPage extends BasePage {
 	    }else{
 		 log.info("Select Address Button is not present present ");
 	    }
+	Thread.sleep(1000);
+	if(getOccupancy().getText().contains("Tenant")) {
+	}
+	yearbuilt yb =new yearbuilt(driver);
+	yb.yearbuilt_validation(yearBuilt); Thread.sleep(500);	
+	yb.Selectyearbuilt(yearBuilt);
+	Thread.sleep(500);
+	yb.OlderReneovatedHomeValidation(yearBuilt, reneovatedHome, state);
+	Thread.sleep(500);
+	PolicyForm pf = new PolicyForm(driver);
+	pf.PolicyFormValues_Validation(state, occupancy, policyForm, yearBuilt);
+	
 	
 	
 	return;

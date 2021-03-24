@@ -42,7 +42,10 @@ public class BaseTest extends ExcelUtils {
     String DOB;
     String Occupancy;
     String FireHyderate;
-
+    int YearBuilt;
+    String ReneovatedHome ;
+    String PolicyForm;
+ 
     @BeforeMethod
     public void setUp() throws Exception {
 
@@ -81,6 +84,9 @@ public class BaseTest extends ExcelUtils {
 		DOB = ExcelUtils.getCellData(a, 10);
 		Occupancy = ExcelUtils.getCellData(a, 11);
 		FireHyderate = ExcelUtils.getCellData(a, 12);
+		YearBuilt = (int) ExcelUtils.getNumericCellValue(a, 13);
+		ReneovatedHome = ExcelUtils.getCellData(a, 14);
+		PolicyForm = ExcelUtils.getCellData(a, 15);
 
 		page = new BasePage(driver);
 	    }
