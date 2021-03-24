@@ -3,6 +3,8 @@
  */
 package com.THStest;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
@@ -11,8 +13,6 @@ import com.THSpages.DisconnectPage;
 import com.THSpages.HomePage;
 import com.THSpages.LoginPage;
 import com.THSpages.PortalPage;
-
-import junit.framework.Assert;
 
 /**
  * @author vdaru
@@ -39,7 +39,7 @@ public class DisConnectPageTest extends BaseTest {
 	Thread.sleep(300);
 	String HomePageHeader = disconnectpage.getHomePageHeader();
 	log.info(HomePageHeader);
-	Assert.assertEquals(HomePageHeader, "RATING & POLICY MANAGEMENT");
+	AssertJUnit.assertEquals(HomePageHeader, "RATING & POLICY MANAGEMENT");
     }
 
 }

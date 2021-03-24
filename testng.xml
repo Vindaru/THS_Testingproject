@@ -3,12 +3,12 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-         <class name="com.THStest.LoginTest"/>
-         <class name="com.THStest.PortalPageTest"/>
-         <class name="com.THStest.DisConnectPageTest"/>
-         <class name="com.THStest.HomePageTest"/>
-         <class name="com.THStest.BasicInformationPageTest"/>
-
+      <class name="com.THStest.LoginTest"/>
+      <class name="com.THStest.DisConnectPageTest"/>
+      <class name="com.THStest.BaseTest"/>
+      <class name="com.THStest.BasicInformationPageTest"/>
+      <class name="com.THStest.HomePageTest"/>
+      <class name="com.THStest.PortalPageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

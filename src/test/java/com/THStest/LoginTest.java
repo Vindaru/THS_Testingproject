@@ -3,6 +3,8 @@
  */
 package com.THStest;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -11,8 +13,6 @@ import org.testng.annotations.Test;
 
 import com.THSpages.LoginPage;
 import com.THSpages.PortalPage;
-
-import junit.framework.Assert;
 
 /**
  * @author vdaru
@@ -27,7 +27,7 @@ public class LoginTest extends BaseTest {
 
 	String LoginInPageTitle = page.getInstance(LoginPage.class).getPageTitile();
 	log.info(LoginInPageTitle);
-	Assert.assertEquals(LoginInPageTitle, "Tower Hill Insurance Group - Login");
+	AssertJUnit.assertEquals(LoginInPageTitle, "Tower Hill Insurance Group - Login");
     } // *[@id="towerRound"]
 
     @Test(priority = 2)
@@ -53,7 +53,7 @@ public class LoginTest extends BaseTest {
 	String portalPageHeader = portalpage.getPortalPageHeader();
 	log.info(portalPageHeader);
 	// WELCOME TO TOWER HILL'S AGENT PORTAL
-	Assert.assertEquals(portalPageHeader, "WELCOME TO TOWER HILL'S AGENT PORTAL");
+	AssertJUnit.assertEquals(portalPageHeader, "WELCOME TO TOWER HILL'S AGENT PORTAL");
     }
 
     @Test(priority = 4)

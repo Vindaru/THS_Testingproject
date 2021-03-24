@@ -3,6 +3,7 @@
  */
 package com.THStest;
 
+import org.testng.annotations.Test;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
@@ -12,8 +13,6 @@ import com.THSpages.DisconnectPage;
 import com.THSpages.HomePage;
 import com.THSpages.LoginPage;
 import com.THSpages.PortalPage;
-
-import junit.framework.Assert;
 
 /**
  * @author vdaru

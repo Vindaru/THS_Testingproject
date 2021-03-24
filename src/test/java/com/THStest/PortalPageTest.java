@@ -3,6 +3,8 @@
  */
 package com.THStest;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
@@ -10,8 +12,6 @@ import org.testng.annotations.Test;
 import com.THSpages.HomePage;
 import com.THSpages.LoginPage;
 import com.THSpages.PortalPage;
-
-import junit.framework.Assert;
 
 /**
  * @author vdaru
@@ -35,7 +35,7 @@ public class PortalPageTest extends BaseTest {
 	String portallogOutbutton = page.getInstance(PortalPage.class).UserPreferencebutton();
 	Thread.sleep(300);
 	log.info(portallogOutbutton);
-	Assert.assertEquals(portallogOutbutton, "User Preferences");
+	AssertJUnit.assertEquals(portallogOutbutton, "User Preferences");
 	// verify if the button is clickible 
     } 
 

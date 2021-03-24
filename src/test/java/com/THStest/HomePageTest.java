@@ -3,6 +3,8 @@
  */
 package com.THStest;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.UnsupportedEncodingException;
 
 import org.apache.log4j.Logger;
@@ -36,7 +38,7 @@ public class HomePageTest extends BaseTest {
 	// HomePage
 	String HomePageTitle = page.getInstance(HomePage.class).getHomePageTitle();
 	log.info(HomePageTitle);
-	Assert.assertEquals(HomePageTitle, "RPM – Tower Hill Insurance – Tower Hill Insurance");
+	AssertJUnit.assertEquals(HomePageTitle, "RPM – Tower Hill Insurance – Tower Hill Insurance");
 
     }
 
@@ -82,27 +84,27 @@ public class HomePageTest extends BaseTest {
 
 	String HomePage_Menu_HOME = page.getInstance(HomePage.class).getHome_text().getText();
 	log.info(HomePage_Menu_HOME);
-	Assert.assertEquals(HomePage_Menu_HOME, "HOME");
+	AssertJUnit.assertEquals(HomePage_Menu_HOME, "HOME");
 
 	String HomePage_Menu_PORTAL = page.getInstance(HomePage.class).getPortal_text().getText();
 	log.info(HomePage_Menu_PORTAL);
-	Assert.assertEquals(HomePage_Menu_PORTAL, "PORTAL");
+	AssertJUnit.assertEquals(HomePage_Menu_PORTAL, "PORTAL");
 
 	String HomePage_Menu_QUOTES = page.getInstance(HomePage.class).getQuotes_text().getText();
 	log.info(HomePage_Menu_QUOTES);
-	Assert.assertEquals(HomePage_Menu_QUOTES, "QUOTES");
+	AssertJUnit.assertEquals(HomePage_Menu_QUOTES, "QUOTES");
 
 	String HomePage_Menu_POLICYMANAGEMENT = page.getInstance(HomePage.class).getPolicyManagment_text().getText();
 	log.info(HomePage_Menu_POLICYMANAGEMENT);
-	Assert.assertEquals(HomePage_Menu_POLICYMANAGEMENT, "POLICY MANAGEMENT");
+	AssertJUnit.assertEquals(HomePage_Menu_POLICYMANAGEMENT, "POLICY MANAGEMENT");
 
 	String HomePage_Menu_ADMIN = page.getInstance(HomePage.class).getAdmin_text().getText();
 	log.info(HomePage_Menu_ADMIN);
-	Assert.assertEquals(HomePage_Menu_ADMIN, "ADMIN");
+	AssertJUnit.assertEquals(HomePage_Menu_ADMIN, "ADMIN");
 
 	String HomePage_Menu_HELP = page.getInstance(HomePage.class).getHelp_text().getText();
 	log.info(HomePage_Menu_HELP);
-	Assert.assertEquals(HomePage_Menu_HELP, "HELP");
+	AssertJUnit.assertEquals(HomePage_Menu_HELP, "HELP");
 
     }
 
@@ -122,7 +124,7 @@ public class HomePageTest extends BaseTest {
 	// test Agency Override label displaying
 	String AgencyOverride_text = page.getInstance(HomePage.class).getAgencyOverridelable().getText();
 	log.info(AgencyOverride_text);
-	Assert.assertEquals(AgencyOverride_text, "Agency Override");
+	AssertJUnit.assertEquals(AgencyOverride_text, "Agency Override");
 	// test Agency Override label displaying
 	Thread.sleep(300);
 	page.getInstance(HomePage.class).doAgencyOverirde(AgencyOveride);
@@ -163,7 +165,7 @@ public class HomePageTest extends BaseTest {
 	Thread.sleep(300);
 	String BIPageHeader = basicinformationpage.getBasicinfopagePageHeader();
 	log.info(BIPageHeader);
-	Assert.assertEquals(BIPageHeader, "Address Validator In Progress.....");
+	AssertJUnit.assertEquals(BIPageHeader, "Address Validator In Progress.....");
 	log.info("Successfully landed in Basicinformation page");
     }
 
