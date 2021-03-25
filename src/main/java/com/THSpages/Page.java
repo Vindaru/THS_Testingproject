@@ -3,6 +3,7 @@ package com.THSpages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class Page {
@@ -29,6 +30,8 @@ public abstract class Page {
     public abstract void waitfForElementPresent(By locator);
 
     public abstract void waitfForPageTitle(String title);
+    
+//    public abstract void getSelectclass(By locator, String value, String type);
 
     // generics
     public <TPage extends BasePage> TPage getInstance(Class<TPage> pageClass) {
@@ -38,7 +41,6 @@ public abstract class Page {
 	    e.printStackTrace();
 	    return null;
 	}
-
     }
 
     public String getPageTitle() {
@@ -46,9 +48,9 @@ public abstract class Page {
 	return null;
     }
 
-    public String getTowerHillImage(By locator) {
+    public WebElement getTowerHillImage(By locator) {
 	// TODO Auto-generated method stub
-	return null;
+	return driver.findElement(locator);
     }
 
     public String getlogOutbutton(By locator) {
@@ -65,5 +67,7 @@ public abstract class Page {
 	// TODO Auto-generated method stub
 	
     }
+
+    
 
 }

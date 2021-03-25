@@ -41,9 +41,9 @@ public class BasicInformationPageTest extends BaseTest {
 	Thread.sleep(1000);
 	page.getInstance(HomePage.class).doSelectStateByDataprovided(RiskState);
 	Thread.sleep(1000);
-	String basicinfoPageheader = page.getInstance(BasicInformationPage.class).getBasicinfopagePageHeader();
-//	Assert.assertEquals(basicinfoPageheader, "RATING & POLICY MANAGEMENT");
-	log.info("Basic information page header -- " + basicinfoPageheader);
+//	String basicinfoPageheader = page.getInstance(BasicInformationPage.class).getBasicinfopagePageHeader();
+////	Assert.assertEquals(basicinfoPageheader, "RATING & POLICY MANAGEMENT");
+//	log.info("Basic information page header -- " + basicinfoPageheader);
     }
 
     // verify lables displaying

@@ -5,7 +5,6 @@
     <classes>
       <class name="com.THStest.LoginTest"/>
       <class name="com.THStest.DisConnectPageTest"/>
-      <class name="com.THStest.BaseTest"/>
       <class name="com.THStest.BasicInformationPageTest"/>
       <class name="com.THStest.HomePageTest"/>
       <class name="com.THStest.PortalPageTest"/>

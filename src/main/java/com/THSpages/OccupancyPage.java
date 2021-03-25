@@ -41,8 +41,6 @@ public class OccupancyPage extends BasePage {
 	 * VERIFY IF ALL THE OCCUPANCIES ARE DISPALYING BASED ON STATES
 	 * 
 	 * =============================================================================
-	 * =============================================================================
-	 * =======
 	 * 
 	 * AL : OWNER || SEASONAL || RENTAL || VACANT || NOT A RESIDENCE
 	 * -----------------------------------------------------------------------------

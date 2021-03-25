@@ -163,10 +163,10 @@ public class HomePageTest extends BaseTest {
 	BasicInformationPage basicinformationpage = page.getInstance(HomePage.class)
 		.doSelectStateByDataprovided(RiskState);
 	Thread.sleep(300);
-	String BIPageHeader = basicinformationpage.getBasicinfopagePageHeader();
-	log.info(BIPageHeader);
-	AssertJUnit.assertEquals(BIPageHeader, "Address Validator In Progress.....");
-	log.info("Successfully landed in Basicinformation page");
+//	String BIPageHeader = basicinformationpage.getBasicinfopagePageHeader();
+//	log.info(BIPageHeader);
+//	AssertJUnit.assertEquals(BIPageHeader, "Address Validator In Progress.....");
+//	log.info("Successfully landed in Basicinformation page");
     }
 
 }

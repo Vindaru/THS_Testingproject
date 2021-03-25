@@ -144,9 +144,9 @@ public class BasicInformationPage extends BasePage {
 	return getPageTitle();
     }
 
-    public String getBasicinfopagePageHeader() {
-	return getPageHeader(header);
-    }
+//    public String getBasicinfopagePageHeader() {
+//	return getPageHeader(header);
+//    }
 
     /*
      * @return the businessOwned_lable
