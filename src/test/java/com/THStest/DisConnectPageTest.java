@@ -28,7 +28,7 @@ public class DisConnectPageTest extends BaseTest {
      * continue to next page
      * 
      */
-    @Test(priority = 1)
+    @Test(dependsOnMethods = {"performPortalTest"},priority = 1)
     public void performDisconnectsessionTest() throws InterruptedException {
 
 	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);

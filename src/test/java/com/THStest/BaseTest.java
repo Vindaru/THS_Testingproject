@@ -3,6 +3,12 @@
  */
 package com.THStest;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Iterator;
+
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
@@ -51,7 +57,6 @@ public class BaseTest extends ExcelUtils {
 
 	String log4jConfPath = "C:\\Users\\vdaru\\eclipse-workspace\\THS_Project\\src\\test\\java\\com\\THStest\\log4j.properties";
 	PropertyConfigurator.configure(log4jConfPath);
-
 	System.setProperty("webdriver.chrome.driver",
 		"C:\\Users\\vdaru\\Desktop\\Desktopp\\ECLIPSE\\requried jars\\chromedriver.exe");
 	driver = new ChromeDriver();
@@ -67,6 +72,7 @@ public class BaseTest extends ExcelUtils {
 
 //	// excel
 	ExcelUtils.setExcelFile(RPM_Constant.Path_TestData + RPM_Constant.File_TestData, "sheet1");
+	
 	int i, j;
 	for (j = 0; j < ExcelUtils.ExcelWSheet.getPhysicalNumberOfRows(); j++) {
 	    for (int a = 1; a < ExcelUtils.ExcelWSheet.getPhysicalNumberOfRows(); a++) {
@@ -88,6 +94,16 @@ public class BaseTest extends ExcelUtils {
 		ReneovatedHome = ExcelUtils.getCellData(a, 14);
 		PolicyForm = ExcelUtils.getCellData(a, 15);
 
+		
+//		ExcelUtils.setCellData("Pass", RowNum, ColNum);
+		
+		
+		
+		
+		
+		
+		
+		
 		page = new BasePage(driver);
 	    }
 	}
@@ -109,11 +125,9 @@ public class BaseTest extends ExcelUtils {
     }
 
     @AfterMethod
-    public void tear_Down() {
+    public void tear_Down() throws Exception {
 
-//        System.out.println("=========================================================================***     END OF AUTOMATION TESTING  ***==============================================================================================================");			
-
-	driver.quit();
+//	driver.quit();
 	log.info("Browser = Chrome opened successfully");
     }
 }

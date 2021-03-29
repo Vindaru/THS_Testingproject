@@ -16,7 +16,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 /**
@@ -35,8 +37,8 @@ public class HomePage extends BasePage {
      * 
      */
     // page locator //*[@id='application-container']/div[3]/div/div/div[2]/div[1]
-
-    private By header = By.xpath("//*[@id='application-container']/div[3]/div/div/div[2]/div[1]");
+ 
+    private By header = By.xpath("//*[@id='addressValidator']/div[1]/div");
     private By AgentInfo = By.xpath("//*[@id='application-container']/div[3]/div/div/div[2]/div[2]");
 
     // Test for labes printing as expected. HOME / PORTAL / QUOTES / POLICY
@@ -165,6 +167,7 @@ public class HomePage extends BasePage {
     }
 
     public String getHomePageHeader() {
+
 	return getPageHeader(header);
     }
 
@@ -177,8 +180,13 @@ public class HomePage extends BasePage {
 	Thread.sleep(300);
 	getAgentChangeSave().sendKeys(Keys.ENTER);
 	Thread.sleep(1000);
-
-	log.info("successfully overrided agent to :  " + AgencyOveride);
+        String agencyOverridetext = driver.findElement(By.xpath("//*[@id='application-container']/div[3]/div/div/div[2]/div[2]")).getText();
+        log.info(agencyOverridetext);
+        if(agencyOverridetext.contains(AgencyOveride)) {
+            log.info("Agency successfully overrider to group ID======== "   +  AgencyOveride );
+        }else {
+            log.info("Agency Overider is UNSUCCESSFUL to group ID======== " + AgencyOveride);
+        }	
 	return;
     }
 
@@ -193,90 +201,26 @@ public class HomePage extends BasePage {
 	List<WebElement> Listall_THS_states = THS_States_select.findElements(ths_applicable_States_list);
 
 	for (WebElement THS_states : Listall_THS_states) {
-	    String getAll_THS_states = THS_states.getText();
-
+	    String getAll_THS_states = THS_states.getText(); 
+           Assert.assertEquals(getAll_THS_states, "NEW QUOTES\n"+ 
+           	"AL\n"+
+           	"AR\n"+
+           	"AZ\n"+
+           	"GA\n"+
+           	"IL\n"+
+           	"IN\n"+
+           	"LA\n"+
+           	"MI\n"+
+           	"MO\n"+
+           	"MS\n"+
+           	"NC\n"+
+           	"OH\n"+
+           	"SC\n"+
+           	"TN\n"+
+           	"TX\n"+
+           	"WI","All States displaying");
 	    log.info(getAll_THS_states);
 
-	    if (getAll_THS_states.contains("AL")) {
-		log.info("State AL is displaying");
-	    } else {
-		log.info("State AL NOT displaying");
-	    }
-	    if (getAll_THS_states.contains("AR")) {
-		log.info("State AR is displaying");
-	    } else {
-		log.info("State AR is NOT displaying");
-	    }
-	    if (getAll_THS_states.contains("AZ")) {
-		log.info("State AZ is displaying");
-	    } else {
-		log.info("State AZ is NOT displaying");
-	    }
-	    if (getAll_THS_states.contains("GA")) {
-		log.info("State GA is displaying");
-	    } else {
-		log.info("State GA is NOT displaying");
-	    }
-	    if (getAll_THS_states.contains("IL")) {
-		log.info("State IL is displaying");
-	    } else {
-		log.info("State IL is NOT displaying");
-	    }
-	    if (getAll_THS_states.contains("IN")) {
-		log.info("State IN is displaying");
-	    } else {
-		log.info("State IN is NOT displaying");
-	    }
-	    if (getAll_THS_states.contains("LA")) {
-		log.info("State LA is displaying");
-	    } else {
-		log.info("State LA is NOT displaying");
-	    }
-	    if (getAll_THS_states.contains("MI")) {
-		log.info("State MI is displaying");
-	    } else {
-		log.info("State MI is NOT displaying");
-	    }
-	    if (getAll_THS_states.contains("MO")) {
-		log.info("State MO is displaying");
-	    } else {
-		log.info("State MO is NOT displaying");
-	    }
-	    if (getAll_THS_states.contains("MS")) {
-		log.info("State MS is displaying");
-	    } else {
-		log.info("State MS is NOT displaying");
-	    }
-	    if (getAll_THS_states.contains("NC")) {
-		log.info("State NC is displaying");
-	    } else {
-		log.info("State NC is NOT displaying");
-	    }
-	    if (getAll_THS_states.contains("OH")) {
-		log.info("State OH is displaying");
-	    } else {
-		log.info("State OH is not displaying");
-	    }
-	    if (getAll_THS_states.contains("SC")) {
-		log.info("State SC is displaying");
-	    } else {
-		log.info("State SC is not displaying");
-	    }
-	    if (getAll_THS_states.contains("TN")) {
-		log.info("State TN is displaying");
-	    } else {
-		log.info("State TN is not displaying");
-	    }
-	    if (getAll_THS_states.contains("TX")) {
-		log.info("State TX is displaying");
-	    } else {
-		log.info("State TX is not displaying");
-	    }
-	    if (getAll_THS_states.contains("WI")) {
-		log.info("State WI is displaying");
-	    } else {
-		log.info("State WI not displaying");
-	    }
 	}
     }
 

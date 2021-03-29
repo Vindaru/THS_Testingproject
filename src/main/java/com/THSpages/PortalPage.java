@@ -38,6 +38,9 @@ public class PortalPage extends BasePage {
     }
 
     public String getPortalPageHeader() {
+	WebDriverWait wait = new WebDriverWait(driver, 10);
+	WebElement element = wait.until(
+	        ExpectedConditions.visibilityOfElementLocated(header));
 	return getPageHeader(header);
     }
 

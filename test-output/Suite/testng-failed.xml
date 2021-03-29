@@ -3,22 +3,23 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
   <test name="Test(failed)" parallel="none">
     <classes>
+      <class name="com.THStest.PortalPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tear_Down"/>
+          <include name="verifyportalpageUserPreferencesbuttondisoplaying"/>
+        </methods>
+      </class> <!-- com.THStest.PortalPageTest -->
       <class name="com.THStest.HomePageTest">
         <methods>
           <include name="setUp"/>
           <include name="tear_Down"/>
         </methods>
       </class> <!-- com.THStest.HomePageTest -->
-      <class name="com.THStest.PortalPageTest">
-        <methods>
-          <include name="setUp"/>
-          <include name="tear_Down"/>
-        </methods>
-      </class> <!-- com.THStest.PortalPageTest -->
       <class name="com.THStest.BasicInformationPageTest">
         <methods>
           <include name="setUp"/>
-          <include name="verifyBasicinfoPage"/>
+          <include name="verify_BasicinformationPage_ExelData"/>
           <include name="tear_Down"/>
         </methods>
       </class> <!-- com.THStest.BasicInformationPageTest -->

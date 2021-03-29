@@ -26,7 +26,7 @@ import com.THSpages.PortalPage;
 public class HomePageTest extends BaseTest {
     private static Logger log = Logger.getLogger(HomePageTest.class.getName() + " ----------------------------------");
 
-    @Test(priority = 1)
+    @Test(priority = 1, description = "Testcase-1(homePageTest) = 'After landing on Homepage verify HomePage title ='RPM – Tower Hill Insurance – Tower Hill Insurance' ")
     public void verify_HomePage_Title() throws InterruptedException {
 
 	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
@@ -39,10 +39,10 @@ public class HomePageTest extends BaseTest {
 	String HomePageTitle = page.getInstance(HomePage.class).getHomePageTitle();
 	log.info(HomePageTitle);
 	AssertJUnit.assertEquals(HomePageTitle, "RPM – Tower Hill Insurance – Tower Hill Insurance");
-
+	log.info("Successfully landed in Homepage and successfully verified Page Title");
     }
 
-    @Test(priority = 2)
+    @Test(priority = 2, description = "Testcase-2(homePageTest) = 'After landing on Homepage verify HomePage header ='RATING & POLICY MANAGEMENT' ")
     public void verify_HomePage_headerTest() throws InterruptedException {
 	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
 	Thread.sleep(300);
@@ -53,10 +53,12 @@ public class HomePageTest extends BaseTest {
 	// HomePage header
 	String HomePageheader = page.getInstance(HomePage.class).getHomePageHeader();
 	log.info(HomePageheader);
+	AssertJUnit.assertEquals(HomePageheader, "RATING & POLICY MANAGEMENT");
+	log.info("Successfully landed in Homepage and successfully verified Page header");
 
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3, description = "Testcase-3(homePageTest) = 'After landing on Homepage verify userDetails displaying as expected ")
     public void verify_HomePage_Userdetails() throws InterruptedException {
 	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
 	Thread.sleep(300);
@@ -70,7 +72,8 @@ public class HomePageTest extends BaseTest {
 
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4, description = "Testcase-4(homePageTest) = 'After landing on Homepage verify MENU TABS displaying 'HOME','PORTAL','QUOTES',"
+	    + "'POLICY MANAGMENT','ADMIN','HELP' ")
     public void verify_HomePage_Menutabs() throws InterruptedException {
 	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
 	Thread.sleep(300);
@@ -78,38 +81,34 @@ public class HomePageTest extends BaseTest {
 	Thread.sleep(300);
 	page.getInstance(DisconnectPage.class).DisconnectSession_button();
 	Thread.sleep(300);
-	// homepage
-	// verify menu tabs consists of HOME, PORTAL, POLICY MANAGMENT, ADMIN, HELP //
-	// PORTAL QUOTES POLICY MANAGEMENT ADMIN HELP
-
 	String HomePage_Menu_HOME = page.getInstance(HomePage.class).getHome_text().getText();
 	log.info(HomePage_Menu_HOME);
 	AssertJUnit.assertEquals(HomePage_Menu_HOME, "HOME");
-
+	log.info("Successfully landed in Homepage and successfully verified HOME Tab on Menu section");
 	String HomePage_Menu_PORTAL = page.getInstance(HomePage.class).getPortal_text().getText();
 	log.info(HomePage_Menu_PORTAL);
 	AssertJUnit.assertEquals(HomePage_Menu_PORTAL, "PORTAL");
-
+	log.info("Successfully landed in Homepage and successfully verified PORTAL Tab on Menu section");
 	String HomePage_Menu_QUOTES = page.getInstance(HomePage.class).getQuotes_text().getText();
 	log.info(HomePage_Menu_QUOTES);
 	AssertJUnit.assertEquals(HomePage_Menu_QUOTES, "QUOTES");
-
+	log.info("Successfully landed in Homepage and successfully verified QUOTES Tab on Menu section");
 	String HomePage_Menu_POLICYMANAGEMENT = page.getInstance(HomePage.class).getPolicyManagment_text().getText();
 	log.info(HomePage_Menu_POLICYMANAGEMENT);
 	AssertJUnit.assertEquals(HomePage_Menu_POLICYMANAGEMENT, "POLICY MANAGEMENT");
-
+	log.info("Successfully landed in Homepage and successfully verified POLICY MANAGEMENT Tab on Menu section");
 	String HomePage_Menu_ADMIN = page.getInstance(HomePage.class).getAdmin_text().getText();
 	log.info(HomePage_Menu_ADMIN);
 	AssertJUnit.assertEquals(HomePage_Menu_ADMIN, "ADMIN");
-
+	log.info("Successfully landed in Homepage and successfully verified ADMIN Tab on Menu section");
 	String HomePage_Menu_HELP = page.getInstance(HomePage.class).getHelp_text().getText();
 	log.info(HomePage_Menu_HELP);
 	AssertJUnit.assertEquals(HomePage_Menu_HELP, "HELP");
-
+	log.info("Successfully landed in Homepage and successfully verified HELP Tab on Menu section");
     }
 
     // Agency Override
-    @Test(priority = 5)
+    @Test(priority = 5, description = "Testcase-5(homePageTest) = 'After landing on Homepage Test AgencyOveride")
     public void verify_HomePage_AgencyOverideTest() throws InterruptedException {
 
 	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
@@ -121,18 +120,16 @@ public class HomePageTest extends BaseTest {
 	// homepage
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	js.executeScript("window.scrollBy(0,1000)");
-	// test Agency Override label displaying
 	String AgencyOverride_text = page.getInstance(HomePage.class).getAgencyOverridelable().getText();
 	log.info(AgencyOverride_text);
 	AssertJUnit.assertEquals(AgencyOverride_text, "Agency Override");
-	// test Agency Override label displaying
 	Thread.sleep(300);
 	page.getInstance(HomePage.class).doAgencyOverirde(AgencyOveride);
 	Thread.sleep(500);
     }
 
     // Quote section verify if all THS applicable states are visible
-    @Test(priority = 6)
+    @Test(priority = 6, description = "Testcase-6(homePageTest) = 'After landing on Homepage Test if all the states are displaying")
     public void verify_HomePage_THS_States_Displaying() throws InterruptedException, UnsupportedEncodingException {
 
 	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
@@ -141,14 +138,12 @@ public class HomePageTest extends BaseTest {
 	Thread.sleep(300);
 	page.getInstance(DisconnectPage.class).DisconnectSession_button();
 	Thread.sleep(300);
-	// homepage
-	// test Agency Override label displaying
 	Thread.sleep(300);
-	page.getInstance(HomePage.class).doverify_THS_Statesapplicability();
+	page.getInstance(HomePage.class).doTHS_Statesapplicability();
 	Thread.sleep(500);
     }
 
-    @Test(priority = 7)
+    @Test(groups ="Use test Data : 'TowerHillTestData' ",priority = 7, description = "Testcase-6(homePageTest) = 'After landing on Homepage Select data by excel data")
     public void Select_THS_State_ExelData() throws InterruptedException {
 
 	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
@@ -163,10 +158,7 @@ public class HomePageTest extends BaseTest {
 	BasicInformationPage basicinformationpage = page.getInstance(HomePage.class)
 		.doSelectStateByDataprovided(RiskState);
 	Thread.sleep(300);
-//	String BIPageHeader = basicinformationpage.getBasicinfopagePageHeader();
-//	log.info(BIPageHeader);
-//	AssertJUnit.assertEquals(BIPageHeader, "Address Validator In Progress.....");
-//	log.info("Successfully landed in Basicinformation page");
+
     }
 
 }

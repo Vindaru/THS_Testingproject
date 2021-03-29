@@ -3,10 +3,12 @@
  */
 package com.THSpages;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.apache.log4j.Logger;
+import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.WebDriver;
@@ -14,7 +16,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openxml4j.exceptions.InvalidFormatException;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+
+import excel_Utlis.TestUtil;
 
 /**
  * @author vdaru
@@ -239,7 +245,8 @@ public class BasicInformationPage extends BasePage {
 	return getElement(validateButton);
     }
 
-    public void getBasicinformationpageLables() throws InterruptedException {
+
+   public void getBasicinformationpageLables() throws InterruptedException {
 
 	Thread.sleep(500);
 	String BusinessOwned_Lable = getBusinessOwned_lable().getText();
@@ -352,15 +359,17 @@ public class BasicInformationPage extends BasePage {
 	    }
 	Thread.sleep(1000);
 	if(getOccupancy().getText().contains("Tenant")) {
-	}
+	    // no year built is requred
+	}else {
 	yearbuilt yb =new yearbuilt(driver);
 	yb.yearbuilt_validation(yearBuilt); Thread.sleep(500);	
 	yb.Selectyearbuilt(yearBuilt);
 	Thread.sleep(500);
 	yb.OlderReneovatedHomeValidation(yearBuilt, reneovatedHome, state);
 	Thread.sleep(500);
+	}
 	PolicyForm pf = new PolicyForm(driver);
-	pf.PolicyFormValues_Validation(state, occupancy, policyForm, yearBuilt);
+	pf.PolicyFormValues_Validation(state, occupancy, policyForm, yearBuilt, reneovatedHome);
 	
 	
 	

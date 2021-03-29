@@ -5,10 +5,10 @@
     <classes>
       <class name="com.THStest.BasicInformationPageTest">
         <methods>
+          <include name="verify_BasicinformationPage_DataProvider"/>
           <include name="beforeTest"/>
           <include name="setUp"/>
           <include name="afterTest"/>
-          <include name="verify_BasicinformationPage_ExelData"/>
           <include name="tear_Down"/>
         </methods>
       </class> <!-- com.THStest.BasicInformationPageTest -->

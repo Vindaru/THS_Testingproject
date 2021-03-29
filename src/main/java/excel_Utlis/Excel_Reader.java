@@ -8,6 +8,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.function.Consumer;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
@@ -23,7 +24,7 @@ import org.openqa.selenium.support.Color;
  *
  */
 public class Excel_Reader {
-
+    
     private FileInputStream fis;
     private FileOutputStream fileOut;
     private Workbook wb;
@@ -33,7 +34,7 @@ public class Excel_Reader {
     private CellStyle cellstype;
     private Color mycolor;
     private String excelFilePath;
-    private Map<String, Integer> columns = new HashMap<>();
+    private Map<String, Integer> columns = new HashMap<String, Integer>();
 
     public void setExcelFile(String ExcelPath, String SheetName) throws Exception {
 
@@ -48,8 +49,11 @@ public class Excel_Reader {
 	    }
 	    this.excelFilePath = ExcelPath;
 	    // adding all the column header names to map "colomns "
-	    sh.getRow(0).forEach(cell -> {
+	    sh.getRow(0).forEach(new Consumer<Cell>() {
+		@Override
+		public void accept(Cell cell) {
 		columns.put(cell.getStringCellValue(), cell.getColumnIndex());
+		}
 	    });
 
 	} catch (Exception e) {
@@ -87,21 +91,16 @@ public class Excel_Reader {
 	} catch (Exception e) {
 	    return "";
 	}
-
     }
-
     public String getCellData(String columnName, int rownum) {
 	return getCellData(rownum, columns.get(columnName));
     }
-
     public static void main(String[] args) throws Exception {
 	Excel_Reader excel = new Excel_Reader();
-
 	excel.setExcelFile("C:\\Users\\vdaru\\eclipse-workspace\\THS_Project\\THS_TestData.xlsx", "Sheet1");
 	System.out.println(excel.getCellData("GroupID", 1));
 	System.out.println(excel.getCellData("Username", 1));
 	System.out.println(excel.getCellData("Password", 1));
-
     }
 
 }

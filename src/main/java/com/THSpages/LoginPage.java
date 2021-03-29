@@ -23,7 +23,7 @@ public class LoginPage extends BasePage {
     private By userName = By.id("inputUserName");
     private By password = By.id("inputPassword");
     private By submitButton = By.xpath("//*[@id='authSubmit']");
-    private By header = By.xpath("//*[@id='loginTitle']");
+    private By header = By.xpath("//*[@id='loginTitle']"); 
     private By invalid_credentials = By.xpath("//*[@id='errorMessage']");
     private By towerHillimage = By.id("towerRound");
 
@@ -147,5 +147,6 @@ public class LoginPage extends BasePage {
 	log.info("TowerHill image displaying as 'towerRound'   ");
 
     }
+   
 
 }

@@ -1,29 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="38501" started-at="2021-03-24T19:53:55Z" finished-at="2021-03-24T19:54:34Z">
+  <suite name="Default suite" duration-ms="64176" started-at="2021-03-29T18:51:40Z" finished-at="2021-03-29T18:52:44Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="38501" started-at="2021-03-24T19:53:55Z" finished-at="2021-03-24T19:54:34Z">
+    <test name="Default test" duration-ms="64176" started-at="2021-03-29T18:51:40Z" finished-at="2021-03-29T18:52:44Z">
       <class name="com.THStest.BasicInformationPageTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.THStest.BasicInformationPageTest@3fd7a715]" name="beforeTest" is-config="true" duration-ms="9" started-at="2021-03-24T15:53:55Z" finished-at="2021-03-24T15:53:55Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.THStest.BasicInformationPageTest@6f1de4c7]" name="beforeTest" is-config="true" duration-ms="10" started-at="2021-03-29T14:51:40Z" finished-at="2021-03-29T14:51:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.THStest.BasicInformationPageTest@3fd7a715]" name="setUp" is-config="true" duration-ms="6264" started-at="2021-03-24T15:53:55Z" finished-at="2021-03-24T15:54:02Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.THStest.BasicInformationPageTest@6f1de4c7]" name="setUp" is-config="true" duration-ms="5143" started-at="2021-03-29T14:51:40Z" finished-at="2021-03-29T14:51:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verify_BasicinformationPage_ExelData()[pri:4, instance:com.THStest.BasicInformationPageTest@3fd7a715]" name="verify_BasicinformationPage_ExelData" duration-ms="32212" started-at="2021-03-24T15:54:02Z" finished-at="2021-03-24T15:54:34Z">
+        <test-method status="FAIL" signature="verify_BasicinformationPage_DataProvider()[pri:3, instance:com.THStest.BasicInformationPageTest@6f1de4c7]" name="verify_BasicinformationPage_DataProvider" duration-ms="59004" started-at="2021-03-29T14:51:45Z" finished-at="2021-03-29T14:52:44Z">
+          <exception class="junit.framework.ComparisonFailure">
+            <message>
+              <![CDATA[expected:<HO-6> but was:<MH>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[junit.framework.ComparisonFailure: expected:<HO-6> but was:<MH>
+	at junit.framework.Assert.assertEquals(Assert.java:81)
+	at junit.framework.Assert.assertEquals(Assert.java:87)
+	at com.THSpages.PolicyForm.PolicyFormValues_Validation(PolicyForm.java:921)
+	at com.THSpages.BasicInformationPage.doBasicinformationPagevalidation(BasicInformationPage.java:372)
+	at com.THStest.BasicInformationPageTest.verify_BasicinformationPage_DataProvider(BasicInformationPageTest.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- junit.framework.ComparisonFailure -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_BasicinformationPage_ExelData -->
-        <test-method status="PASS" signature="tear_Down()[pri:0, instance:com.THStest.BasicInformationPageTest@3fd7a715]" name="tear_Down" is-config="true" duration-ms="1" started-at="2021-03-24T15:54:34Z" finished-at="2021-03-24T15:54:34Z">
+        </test-method> <!-- verify_BasicinformationPage_DataProvider -->
+        <test-method status="PASS" signature="tear_Down()[pri:0, instance:com.THStest.BasicInformationPageTest@6f1de4c7]" name="tear_Down" is-config="true" duration-ms="1" started-at="2021-03-29T14:52:44Z" finished-at="2021-03-29T14:52:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tear_Down -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.THStest.BasicInformationPageTest@3fd7a715]" name="afterTest" is-config="true" duration-ms="1" started-at="2021-03-24T15:54:34Z" finished-at="2021-03-24T15:54:34Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.THStest.BasicInformationPageTest@6f1de4c7]" name="afterTest" is-config="true" duration-ms="0" started-at="2021-03-29T14:52:44Z" finished-at="2021-03-29T14:52:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
