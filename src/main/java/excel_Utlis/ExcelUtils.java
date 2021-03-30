@@ -7,140 +7,135 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
-import com.THSpages.Page;
 
 public class ExcelUtils {
 
-    public static XSSFSheet ExcelWSheet;
+	public static XSSFSheet ExcelWSheet;
 
-    public static XSSFWorkbook ExcelWBook;
+	public static XSSFWorkbook ExcelWBook;
 
-    private static XSSFCell Cell;
+	private static XSSFCell Cell;
 
-    private static XSSFRow Row;
+	private static XSSFRow Row;
 
 //This method is to set the File path and to open the Excel file, Pass Excel Path and Sheetname as Arguments to this method
 
-    public static void setExcelFile(String Path, String SheetName) throws Exception {
+	public static void setExcelFile(String Path, String SheetName) throws Exception {
 
-	try {
+		try {
 
-	    // Open the Excel file
+			// Open the Excel file
 
-	    FileInputStream ExcelFile = new FileInputStream(Path);
+			FileInputStream ExcelFile = new FileInputStream(Path);
 
 // Access the required test data sheet
 
-	    ExcelWBook = new XSSFWorkbook(ExcelFile);
+			ExcelWBook = new XSSFWorkbook(ExcelFile);
 
-	    ExcelWSheet = ExcelWBook.getSheet(SheetName);
+			ExcelWSheet = ExcelWBook.getSheet(SheetName);
 
-	} catch (Exception e) {
+		} catch (Exception e) {
 
-	    throw (e);
+			throw (e);
+
+		}
 
 	}
-
-    }
 
 //This method is to read the test data from the Excel cell, in this we are passing parameters as Row num and Col num
 
-    public static String getCellData(int RowNum, int ColNum) throws Exception {
+	public static String getCellData(int RowNum, int ColNum) throws Exception {
 
-	try {
+		try {
 
-	    Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
+			Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
 
-	    String CellData = Cell.getStringCellValue();
+			String CellData = Cell.getStringCellValue();
 
-	    return CellData;
+			return CellData;
 
-	} catch (Exception e) {
+		} catch (Exception e) {
 
-	    return "";
+			return "";
 
-	}
-
-    }
-
-    public static double getNumericCellValue(int RowNum, int ColNum) throws Exception {
-
-	try {
-
-	    Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
-
-	    double CellData = Cell.getNumericCellValue();
-
-	    return CellData;
-
-	} catch (Exception e) {
-
-	    return ColNum;
+		}
 
 	}
 
-    }
+	public static double getNumericCellValue(int RowNum, int ColNum) throws Exception {
 
-    public static java.sql.Date getDateCellValue(int RowNum, int ColNum) throws Exception {
+		try {
 
-	try {
+			Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
 
-	    Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
+			double CellData = Cell.getNumericCellValue();
 
-	    Date CellData = Cell.getDateCellValue();
+			return CellData;
 
-	    return (java.sql.Date) CellData;
+		} catch (Exception e) {
 
-	} catch (Exception e) {
+			return ColNum;
 
-	    return null;
+		}
 
 	}
 
-    }
+	public static java.sql.Date getDateCellValue(int RowNum, int ColNum) throws Exception {
+
+		try {
+
+			Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
+
+			Date CellData = Cell.getDateCellValue();
+
+			return (java.sql.Date) CellData;
+
+		} catch (Exception e) {
+
+			return null;
+
+		}
+
+	}
 
 //This method is to write in the Excel cell, Row num and Col num are the parameters
 
-    public static void setCellData(String Result, int RowNum, int ColNum) throws Exception {
+	public static void setCellData(String Result, int RowNum, int ColNum) throws Exception {
 
-	try {
+		try {
 
-	    Row = ExcelWSheet.getRow(RowNum);
+			Row = ExcelWSheet.getRow(RowNum);
 
-	    Cell = Row.getCell(ColNum);
+			Cell = Row.getCell(ColNum);
 
-	    if (Cell == null) {
+			if (Cell == null) {
 
-		Cell = Row.createCell(ColNum);
+				Cell = Row.createCell(ColNum);
 
-		Cell.setCellValue(Result);
+				Cell.setCellValue(Result);
 
-	    } else {
+			} else {
 
-		Cell.setCellValue(Result);
+				Cell.setCellValue(Result);
 
-	    }
+			}
 
-	    // Constant variables Test Data path and Test Data file name
+			// Constant variables Test Data path and Test Data file name
 
-	    FileOutputStream fileOut = new FileOutputStream(RPM_Constant.Path_TestData + RPM_Constant.File_TestData);
+			FileOutputStream fileOut = new FileOutputStream(RPM_Constant.Path_TestData + RPM_Constant.File_TestData);
 
-	    ExcelWBook.write(fileOut);
+			ExcelWBook.write(fileOut);
 
-	    fileOut.flush();
+			fileOut.flush();
 
-	    fileOut.close();
+			fileOut.close();
 
-	} catch (Exception e) {
+		} catch (Exception e) {
 
-	    throw (e);
+			throw (e);
+
+		}
 
 	}
-
-    }
 
 }

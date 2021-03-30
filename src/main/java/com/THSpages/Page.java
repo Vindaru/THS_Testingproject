@@ -7,63 +7,63 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class Page {
 
-    // abstract class
+	// abstract class
 
-    WebDriver driver;
-    WebDriverWait wait;
+	WebDriver driver;
+	WebDriverWait wait;
 
 //constructor 
-    public Page(WebDriver driver) {
-	this.driver = driver;
-	this.wait = new WebDriverWait(this.driver, 15);
+	public Page(WebDriver driver) {
+		this.driver = driver;
+		this.wait = new WebDriverWait(this.driver, 15);
 
-    }
-
-//abstraction method 
-    public abstract String getPageTitile();
-
-    public abstract String getPageHeader(By locator);
-
-    public abstract WebElement getElement(By locator);
-
-    public abstract void waitfForElementPresent(By locator);
-
-    public abstract void waitfForPageTitle(String title);
-
-    // generics
-    public <TPage extends BasePage> TPage getInstance(Class<TPage> pageClass) {
-	try {
-	    return pageClass.getDeclaredConstructor(WebDriver.class).newInstance(this.driver);
-	} catch (Exception e) {
-	    e.printStackTrace();
-	    return null;
 	}
 
-    }
+//abstraction method 
+	public abstract String getPageTitile();
 
-    public String getPageTitle() {
-	// TODO Auto-generated method stub
-	return null;
-    }
+	public abstract String getPageHeader(By locator);
 
-    public String getTowerHillImage(By locator) {
-	// TODO Auto-generated method stub
-	return null;
-    }
+	public abstract WebElement getElement(By locator);
 
-    public String getlogOutbutton(By locator) {
-	// TODO Auto-generated method stub
-	return null;
-    }
+	public abstract void waitfForElementPresent(By locator);
 
-    public String getportalUserPreferencesbutton(By locator) {
-	// TODO Auto-generated method stub
-	return null;
-    }
+	public abstract void waitfForPageTitle(String title);
 
-    public void waitfForPageHeader(String header) {
-	// TODO Auto-generated method stub
-	
-    }
+	// generics
+	public <TPage extends BasePage> TPage getInstance(Class<TPage> pageClass) {
+		try {
+			return pageClass.getDeclaredConstructor(WebDriver.class).newInstance(this.driver);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+
+	}
+
+	public String getPageTitle() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String getTowerHillImage(By locator) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String getlogOutbutton(By locator) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String getportalUserPreferencesbutton(By locator) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void waitfForPageHeader(String header) {
+		// TODO Auto-generated method stub
+
+	}
 
 }

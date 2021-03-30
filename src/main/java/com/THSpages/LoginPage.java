@@ -17,135 +17,135 @@ import junit.framework.Assert;
  */
 public class LoginPage extends BasePage {
 
-    private static Logger log = Logger.getLogger(LoginPage.class.getName() + " ----------------------------------");
-    // page locator
-    private By groupID = By.id("inputGroupID");
-    private By userName = By.id("inputUserName");
-    private By password = By.id("inputPassword");
-    private By submitButton = By.xpath("//*[@id='authSubmit']");
-    private By header = By.xpath("//*[@id='loginTitle']");
-    private By invalid_credentials = By.xpath("//*[@id='errorMessage']");
-    private By towerHillimage = By.id("towerRound");
+	private static Logger log = Logger.getLogger(LoginPage.class.getName() + " ----------------------------------");
+	// page locator
+	private By groupID = By.id("inputGroupID");
+	private By userName = By.id("inputUserName");
+	private By password = By.id("inputPassword");
+	private By submitButton = By.xpath("//*[@id='authSubmit']");
+	private By header = By.xpath("//*[@id='loginTitle']");
+	private By invalid_credentials = By.xpath("//*[@id='errorMessage']");
+	private By towerHillimage = By.id("towerRound");
 
 //    private String GroupID = "";
 
-    public LoginPage(WebDriver driver) {
-	super(driver);
-    }
+	public LoginPage(WebDriver driver) {
+		super(driver);
+	}
 
-    /*
-     * Getters (process of encapsulation)
-     * 
-     */
+	/*
+	 * Getters (process of encapsulation)
+	 * 
+	 */
 
-    /**
-     * @return the groupID
-     */
-    public WebElement getGroupID() {
-	return getElement(groupID);
-    }
+	/**
+	 * @return the groupID
+	 */
+	public WebElement getGroupID() {
+		return getElement(groupID);
+	}
 
-    /**
-     * @return the userName
-     */
-    public WebElement getUserName() {
-	return getElement(userName);
-    }
+	/**
+	 * @return the userName
+	 */
+	public WebElement getUserName() {
+		return getElement(userName);
+	}
 
-    /**
-     * @return the password
-     */
-    public WebElement getPassword() {
-	return getElement(password);
-    }
+	/**
+	 * @return the password
+	 */
+	public WebElement getPassword() {
+		return getElement(password);
+	}
 
-    /**
-     * @return the submitButton
-     */
-    public WebElement getSubmitButton() {
-	return getElement(submitButton);
-    }
+	/**
+	 * @return the submitButton
+	 */
+	public WebElement getSubmitButton() {
+		return getElement(submitButton);
+	}
 
-    /**
-     * @return the header
-     */
-    public WebElement getHeader() {
-	return getElement(header);
-    }
+	/**
+	 * @return the header
+	 */
+	public WebElement getHeader() {
+		return getElement(header);
+	}
 
-    /**
-     * @return the invalid_credentials
-     */
-    public WebElement getinvalid_credentials() {
-	return getElement(invalid_credentials);
-    }
+	/**
+	 * @return the invalid_credentials
+	 */
+	public WebElement getinvalid_credentials() {
+		return getElement(invalid_credentials);
+	}
 
-    public String getLogininPagetitle() {
-	return getPageTitle();
-    }
+	public String getLogininPagetitle() {
+		return getPageTitle();
+	}
 
-    public String getLogininPageheader() {
-	return getPageHeader(header);
-    }
+	public String getLogininPageheader() {
+		return getPageHeader(header);
+	}
 
-    /**
-     * @return the towerHillimage
-     */
-    public WebElement gettowerHillimage() {
-	return getElement(towerHillimage);
-    }
+	/**
+	 * @return the towerHillimage
+	 */
+	public WebElement gettowerHillimage() {
+		return getElement(towerHillimage);
+	}
 
-    public PortalPage doLogin(String groupID, String userName, String password) throws InterruptedException {
+	public PortalPage doLogin(String groupID, String userName, String password) throws InterruptedException {
 
-	log.info("GroupID:" + groupID);
-	log.info("UseName:" + userName);
-	log.info("Password:" + password);
-	JavascriptExecutor js = (JavascriptExecutor) driver;
-	js.executeScript("window.scrollBy(0,1000)");
-	getGroupID().sendKeys(groupID);
-	Thread.sleep(300);
-	getUserName().sendKeys(userName);
-	Thread.sleep(300);
-	getPassword().sendKeys(password);
-	Thread.sleep(300);
-	getSubmitButton().click();
-	Thread.sleep(300);
-	// get instance
-	return getInstance(PortalPage.class);
+		log.info("GroupID:" + groupID);
+		log.info("UseName:" + userName);
+		log.info("Password:" + password);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,1000)");
+		getGroupID().sendKeys(groupID);
+		Thread.sleep(300);
+		getUserName().sendKeys(userName);
+		Thread.sleep(300);
+		getPassword().sendKeys(password);
+		Thread.sleep(300);
+		getSubmitButton().click();
+		Thread.sleep(300);
+		// get instance
+		return getInstance(PortalPage.class);
 
-    }
+	}
 
-    public PortalPage doLogin_InvalidCred(String groupID, String userName, String password)
-	    throws InterruptedException {
+	public PortalPage doLogin_InvalidCred(String groupID, String userName, String password)
+			throws InterruptedException {
 
-	log.info("GroupID:" + groupID);
-	log.info("UseName:" + userName);
-	log.info("Password:" + password);
-	JavascriptExecutor js = (JavascriptExecutor) driver;
-	js.executeScript("window.scrollBy(0,1000)");
-	getGroupID().sendKeys(groupID);
-	Thread.sleep(300);
-	getUserName().sendKeys(userName);
-	Thread.sleep(300);
-	getPassword().sendKeys(password);
-	Thread.sleep(300);
-	getSubmitButton().click();
-	Thread.sleep(500);
-	String Test_InvalidCreditionals = getinvalid_credentials().getAttribute("value");
-	log.info(Test_InvalidCreditionals);
+		log.info("GroupID:" + groupID);
+		log.info("UseName:" + userName);
+		log.info("Password:" + password);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,1000)");
+		getGroupID().sendKeys(groupID);
+		Thread.sleep(300);
+		getUserName().sendKeys(userName);
+		Thread.sleep(300);
+		getPassword().sendKeys(password);
+		Thread.sleep(300);
+		getSubmitButton().click();
+		Thread.sleep(500);
+		String Test_InvalidCreditionals = getinvalid_credentials().getAttribute("value");
+		log.info(Test_InvalidCreditionals);
 
 //  	Assert.assertEquals(Test_InvalidCreditionals, "get instance Authentication Failed. Please check your credentials and try again. &nbsp;&nbsp;"); 
 
-	return getInstance(PortalPage.class);
+		return getInstance(PortalPage.class);
 
-    }
+	}
 
-    public void dotesttowerhillimage() {
+	public void dotesttowerhillimage() {
 
-	boolean logoPresent = driver.findElement(towerHillimage).isDisplayed();
-	Assert.assertTrue(logoPresent);
-	log.info("TowerHill image displaying as 'towerRound'   ");
+		boolean logoPresent = driver.findElement(towerHillimage).isDisplayed();
+		Assert.assertTrue(logoPresent);
+		log.info("TowerHill image displaying as 'towerRound'   ");
 
-    }
+	}
 
 }
