@@ -29,7 +29,7 @@ public class PortalPageTest extends BaseTest {
 	@Test(priority = 1)
 	public void verifyportalpageUserPreferencesbuttondisoplaying() throws InterruptedException {
 
-		page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
+		page.getInstance(LoginPage.class).doLogin(GroupID, UserName, Password);
 		Thread.sleep(300);
 		String portallogOutbutton = page.getInstance(PortalPage.class).UserPreferencebutton();
 		Thread.sleep(300);
@@ -41,7 +41,7 @@ public class PortalPageTest extends BaseTest {
 	@Test(priority = 2)
 	public void performPortalTest() throws InterruptedException {
 
-		page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
+		page.getInstance(LoginPage.class).doLogin(GroupID, UserName, Password);
 		Thread.sleep(300);
 		HomePage portalpage = page.getInstance(PortalPage.class).PLP_CLICK();
 		Thread.sleep(300);

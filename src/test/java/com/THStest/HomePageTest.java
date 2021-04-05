@@ -25,7 +25,7 @@ public class HomePageTest extends BaseTest {
     @Test(priority = 1)
     public void verify_HomePage_Title() throws InterruptedException {
 
-	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
+	page.getInstance(LoginPage.class).doLogin(GroupID, UserName, Password);
 	Thread.sleep(300);
 	HomePage portalpage = page.getInstance(PortalPage.class).PLP_CLICK();
 	Thread.sleep(300);
@@ -40,7 +40,7 @@ public class HomePageTest extends BaseTest {
 
     @Test(priority = 2)
     public void verify_HomePage_headerTest() throws InterruptedException {
-	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
+	page.getInstance(LoginPage.class).doLogin(GroupID, UserName, Password);
 	Thread.sleep(300);
 	HomePage portalpage = page.getInstance(PortalPage.class).PLP_CLICK();
 	Thread.sleep(300);
@@ -54,7 +54,7 @@ public class HomePageTest extends BaseTest {
 
     @Test(priority = 3)
     public void verify_HomePage_Userdetails() throws InterruptedException {
-	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
+	page.getInstance(LoginPage.class).doLogin(GroupID, UserName, Password);
 	Thread.sleep(300);
 	HomePage portalpage = page.getInstance(PortalPage.class).PLP_CLICK();
 	Thread.sleep(300);
@@ -68,7 +68,7 @@ public class HomePageTest extends BaseTest {
 
     @Test(priority = 4)
     public void verify_HomePage_Menutabs() throws InterruptedException {
-	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
+	page.getInstance(LoginPage.class).doLogin(GroupID, UserName, Password);
 	Thread.sleep(300);
 	HomePage portalpage = page.getInstance(PortalPage.class).PLP_CLICK();
 	Thread.sleep(300);
@@ -108,7 +108,7 @@ public class HomePageTest extends BaseTest {
     @Test(priority = 5)
     public void verify_HomePage_AgencyOverideTest() throws InterruptedException {
 
-	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
+	page.getInstance(LoginPage.class).doLogin(GroupID, UserName, Password);
 	Thread.sleep(300);
 	HomePage portalpage = page.getInstance(PortalPage.class).PLP_CLICK();
 	Thread.sleep(300);
@@ -123,7 +123,7 @@ public class HomePageTest extends BaseTest {
 	Assert.assertEquals(AgencyOverride_text, "Agency Override");
 	// test Agency Override label displaying
 	Thread.sleep(300);
-	page.getInstance(HomePage.class).doAgencyOverirde(AgencyOveride);
+	page.getInstance(HomePage.class).doAgencyOverirde(Agencyoverride);
 	Thread.sleep(500);
     }
 
@@ -131,7 +131,7 @@ public class HomePageTest extends BaseTest {
     @Test(priority = 6)
     public void verify_HomePage_THS_States_Displaying() throws InterruptedException, UnsupportedEncodingException {
 
-	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
+	page.getInstance(LoginPage.class).doLogin(GroupID, UserName, Password);
 	Thread.sleep(300);
 	HomePage portalpage = page.getInstance(PortalPage.class).PLP_CLICK();
 	Thread.sleep(300);
@@ -147,7 +147,7 @@ public class HomePageTest extends BaseTest {
     @Test(priority = 7)
     public void Select_THS_State_ExelData() throws InterruptedException {
 
-	page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
+	page.getInstance(LoginPage.class).doLogin(GroupID, UserName, Password);
 	Thread.sleep(300);
 	HomePage portalpage = page.getInstance(PortalPage.class).PLP_CLICK();
 	Thread.sleep(300);
@@ -164,5 +164,7 @@ public class HomePageTest extends BaseTest {
 	Assert.assertEquals(BIPageHeader, "Address Validator In Progress.....");
 	log.info("Successfully landed in Basicinformation page");
     }
+    
+   
 
 }

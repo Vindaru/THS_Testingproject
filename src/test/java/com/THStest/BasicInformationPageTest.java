@@ -30,7 +30,7 @@ public class BasicInformationPageTest extends BaseTest {
 	// header
 	@Test(priority = 1)
 	public void verify_BasicinformationPage_header() throws InterruptedException {
-		page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
+		page.getInstance(LoginPage.class).doLogin(GroupID, UserName, Password);
 		Thread.sleep(300);
 		page.getInstance(PortalPage.class).PLP_CLICK();
 		Thread.sleep(300);
@@ -47,7 +47,7 @@ public class BasicInformationPageTest extends BaseTest {
 	@Test(priority = 3)
 	public void verify_BasicinformationPage_Labels() throws InterruptedException {
 
-		page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
+		page.getInstance(LoginPage.class).doLogin(GroupID, UserName, Password);
 		Thread.sleep(300);
 		page.getInstance(PortalPage.class).PLP_CLICK();
 		Thread.sleep(300);
@@ -62,7 +62,7 @@ public class BasicInformationPageTest extends BaseTest {
 
 	@Test(priority = 4)
 	public void verify_BasicinformationPage_ExelData() throws InterruptedException {
-		page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
+		page.getInstance(LoginPage.class).doLogin(GroupID, UserName, Password);
 		Thread.sleep(300);
 		page.getInstance(PortalPage.class).PLP_CLICK();
 		Thread.sleep(300);

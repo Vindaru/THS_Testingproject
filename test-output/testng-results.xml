@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="27488" started-at="2021-03-22T20:10:19Z" finished-at="2021-03-22T20:10:47Z">
+  <suite started-at="2021-04-01T15:50:33Z" name="Default suite" finished-at="2021-04-01T15:51:27Z" duration-ms="53475">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="27488" started-at="2021-03-22T20:10:19Z" finished-at="2021-03-22T20:10:47Z">
-      <class name="com.THStest.BasicInformationPageTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.THStest.BasicInformationPageTest@3fd7a715]" name="beforeTest" is-config="true" duration-ms="9" started-at="2021-03-22T16:10:19Z" finished-at="2021-03-22T16:10:19Z">
+    <test started-at="2021-04-01T15:50:33Z" name="Default test" finished-at="2021-04-01T15:51:27Z" duration-ms="53475">
+      <class name="com.THStest.Hanover_1">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.THStest.Hanover_1@19c65cdc]" started-at="2021-04-01T11:50:33Z" name="beforeTest" finished-at="2021-04-01T11:50:33Z" duration-ms="20" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.THStest.BasicInformationPageTest@3fd7a715]" name="setUp" is-config="true" duration-ms="4758" started-at="2021-03-22T16:10:19Z" finished-at="2021-03-22T16:10:24Z">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.THStest.Hanover_1@19c65cdc]" started-at="2021-04-01T11:50:33Z" name="setUp" finished-at="2021-04-01T11:50:38Z" duration-ms="4700" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verify_BasicinformationPage_ExelData()[pri:4, instance:com.THStest.BasicInformationPageTest@3fd7a715]" name="verify_BasicinformationPage_ExelData" duration-ms="22697" started-at="2021-03-22T16:10:24Z" finished-at="2021-03-22T16:10:47Z">
+        <test-method signature="Testhanover()[pri:0, instance:com.THStest.Hanover_1@19c65cdc]" started-at="2021-04-01T11:50:38Z" name="Testhanover" finished-at="2021-04-01T11:51:26Z" duration-ms="47726" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_BasicinformationPage_ExelData -->
-        <test-method status="PASS" signature="tear_Down()[pri:0, instance:com.THStest.BasicInformationPageTest@3fd7a715]" name="tear_Down" is-config="true" duration-ms="1" started-at="2021-03-22T16:10:47Z" finished-at="2021-03-22T16:10:47Z">
+        </test-method> <!-- Testhanover -->
+        <test-method is-config="true" signature="tear_Down()[pri:0, instance:com.THStest.Hanover_1@19c65cdc]" started-at="2021-04-01T11:51:26Z" name="tear_Down" finished-at="2021-04-01T11:51:27Z" duration-ms="1001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tear_Down -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.THStest.BasicInformationPageTest@3fd7a715]" name="afterTest" is-config="true" duration-ms="1" started-at="2021-03-22T16:10:47Z" finished-at="2021-03-22T16:10:47Z">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.THStest.Hanover_1@19c65cdc]" started-at="2021-04-01T11:51:27Z" name="afterTest" finished-at="2021-04-01T11:51:27Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-      </class> <!-- com.THStest.BasicInformationPageTest -->
+      </class> <!-- com.THStest.Hanover_1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

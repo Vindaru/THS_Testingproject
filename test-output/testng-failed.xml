@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite parallel="none" name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="com.THStest.BasicInformationPageTest">
+      <class name="com.THStest.Hanover_1">
         <methods>
           <include name="beforeTest"/>
           <include name="setUp"/>
           <include name="afterTest"/>
-          <include name="verify_BasicinformationPage_ExelData"/>
+          <include name="Testhanover"/>
           <include name="tear_Down"/>
         </methods>
-      </class> <!-- com.THStest.BasicInformationPageTest -->
+      </class> <!-- com.THStest.Hanover_1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -3,6 +3,8 @@ package excel_Utlis;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.Date;
+
+import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -10,13 +12,13 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtils {
 
-	public static XSSFSheet ExcelWSheet;
+	public static Sheet ExcelWSheet;
 
 	public static XSSFWorkbook ExcelWBook;
 
-	private static XSSFCell Cell;
+	private static org.apache.poi.ss.usermodel.Cell Cell;
 
-	private static XSSFRow Row;
+	private static org.apache.poi.ss.usermodel.Row Row;
 
 //This method is to set the File path and to open the Excel file, Pass Excel Path and Sheetname as Arguments to this method
 

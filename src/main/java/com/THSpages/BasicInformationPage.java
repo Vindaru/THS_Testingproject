@@ -134,6 +134,8 @@ public class BasicInformationPage extends BasePage {
 		return getElement(Fire_Hyderant);
 	}
 
+	
+
 	public WebElement getHeader() {
 		return getElement(header);
 	}

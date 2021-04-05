@@ -53,7 +53,7 @@ public class HomePage extends BasePage {
 //   By quotes_Select_States            = By.xpath("//*[@id='custom-bootstrap-menu']/div/div/ul/li[3]"); //a[@class='dropdown-toggle'][1]
 	private By ths_applicable_States_list = By.xpath("//*[@id='custom-bootstrap-menu']/div/div/ul/li[3]/ul/li/div/ul");
 	private By quotes_Select_States = By.xpath("//a[@class='dropdown-toggle'][1]");
-
+	//*[@id="custom-bootstrap-menu"]/div/div/ul/li[3]/ul
 // getters    
 
 	/**

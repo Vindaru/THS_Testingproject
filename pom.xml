@@ -8,14 +8,9 @@
 	<version>1.0-SNAPSHOT</version>
 	<name>THS_Testing</name>
 	<url>http://maven.apache.org</url>
-
 	<!-- Maven compiler plugin 1.8 -->
-
-
 	<build>
-
 		<sourceDirectory>src</sourceDirectory>
-
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -37,7 +32,6 @@
 			</plugin>
 		</plugins>
 	</build>
-
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -66,14 +60,12 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
 			<version>5.0.0</version>
 		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>

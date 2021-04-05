@@ -7,6 +7,7 @@ import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
 import com.THSpages.LoginPage;
 import com.THSpages.PortalPage;
+
 import junit.framework.Assert;
 
 /**
@@ -37,7 +38,7 @@ public class LoginTest extends BaseTest {
 		/*
 		 * perform login test with valid cred GroupID
 		 */
-		PortalPage portalpage = page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
+		PortalPage portalpage = page.getInstance(LoginPage.class).doLogin(GroupID, UserName, Password);
 		log.info("Testing if agent is able to login in with valid creditionals ");
 		try {
 			Thread.sleep(2000);
@@ -56,7 +57,7 @@ public class LoginTest extends BaseTest {
 		/*
 		 * perform login test with in-valid password
 		 */
-		page.getInstance(LoginPage.class).doLogin_InvalidCred(GroupID, UseName, "invalid password");
+		page.getInstance(LoginPage.class).doLogin_InvalidCred(GroupID,UserName , "invalid password");
 		log.info("Testing if agent is able to login with invalid password");
 		try {
 			Thread.sleep(2000);
@@ -72,5 +73,13 @@ public class LoginTest extends BaseTest {
 
 		page.getInstance(LoginPage.class).dotesttowerhillimage();
 	}
+
+	@Test(priority = 1)
+	public void test() {
+
+		LoginPage l = new LoginPage(driver);
+		l.getGroupID().sendKeys(GroupID);
+	}
+	
 
 }

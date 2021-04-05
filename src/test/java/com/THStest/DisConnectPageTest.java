@@ -29,7 +29,7 @@ public class DisConnectPageTest extends BaseTest {
 	@Test(priority = 1)
 	public void performDisconnectsessionTest() throws InterruptedException {
 
-		page.getInstance(LoginPage.class).doLogin(GroupID, UseName, Password);
+		page.getInstance(LoginPage.class).doLogin(GroupID, UserName, Password);
 		Thread.sleep(300);
 		page.getInstance(PortalPage.class).PLP_CLICK();
 		Thread.sleep(300);
